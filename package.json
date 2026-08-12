@@ -1,0 +1,50 @@
+{
+  "name": "policylint-dlp",
+  "version": "0.2.1",
+  "description": "Explainable solver-aided verification of multi-channel enterprise DLP policies",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "policylint-dlp": "src/cli.js"
+  },
+  "scripts": {
+    "test": "node --test",
+    "lint": "node scripts/validate-project.js",
+    "analyze": "node src/cli.js analyze examples/sample-policy.json --format text",
+    "benchmark": "node experiments/run-benchmark.js",
+    "spedia": "node experiments/run-spedia-replay.js",
+    "figures": "python experiments/make_figures.py"
+  },
+  "keywords": [
+    "data-loss-prevention",
+    "dlp",
+    "smt",
+    "z3",
+    "policy-analysis",
+    "formal-verification"
+  ],
+  "author": {
+    "name": "Fatih Kaplan",
+    "email": "fatih.kaplan@eminevim.com.tr"
+  },
+  "contributors": [
+    "Abdurrahim Özel <abdurrahim.ozel@eminevim.com.tr>",
+    "Dursun Poyraz Gümüş <poyraz.gumus@eminevim.com.tr>",
+    "Furkan Çağlar Çelik <caglar.celik@eminevim.com.tr>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fatihkaplanfk/policyLint-dlp.git"
+  },
+  "homepage": "https://github.com/fatihkaplanfk/policyLint-dlp#readme",
+  "bugs": {
+    "url": "https://github.com/fatihkaplanfk/policyLint-dlp/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "z3-solver": "^4.15.4"
+  }
+}

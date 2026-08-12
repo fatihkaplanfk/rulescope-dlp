@@ -1,0 +1,11 @@
+variant,mutations,semantics,total_events,anomaly_events,non_anomaly_events,protected_events,protected_anomaly,protected_non_anomaly,satisfied_required_events,exposed_events,exposed_anomaly,exposed_non_anomaly,observed_requirement_coverage,anomaly_exposure_rate,non_anomaly_exposure_rate
+clean,,first_match,56737,30085,26652,4474,2686,1788,4474,0,0,0,1,0,0
+clean,,most_restrictive,56737,30085,26652,4474,2686,1788,4474,0,0,0,1,0,0
+shadow_email,shadow_email,first_match,56737,30085,26652,4474,2686,1788,2623,1851,1236,615,0.5862762628520339,0.46016381236038717,0.34395973154362414
+shadow_email,shadow_email,most_restrictive,56737,30085,26652,4474,2686,1788,4474,0,0,0,1,0,0
+exception_usb,exception_usb,first_match,56737,30085,26652,4474,2686,1788,2296,2178,1300,878,0.5131873044255699,0.48399106478034254,0.49105145413870244
+exception_usb,exception_usb,most_restrictive,56737,30085,26652,4474,2686,1788,2296,2178,1300,878,0.5131873044255699,0.48399106478034254,0.49105145413870244
+conflict_cloud,conflict_cloud,first_match,56737,30085,26652,4474,2686,1788,4029,445,150,295,0.900536432722396,0.05584512285927029,0.16498881431767337
+conflict_cloud,conflict_cloud,most_restrictive,56737,30085,26652,4474,2686,1788,4474,0,0,0,1,0,0
+combined_faults,shadow_email+exception_usb+conflict_cloud,first_match,56737,30085,26652,4474,2686,1788,0,4474,2686,1788,0,1,1
+combined_faults,shadow_email+exception_usb+conflict_cloud,most_restrictive,56737,30085,26652,4474,2686,1788,2296,2178,1300,878,0.5131873044255699,0.48399106478034254,0.49105145413870244

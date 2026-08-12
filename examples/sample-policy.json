@@ -1,0 +1,60 @@
+{
+  "name": "Enterprise Multi-Channel DLP Example",
+  "version": "1.0",
+  "semantics": "first_match",
+  "default_action": "Permit",
+  "numeric_limits": { "size_mb": [0, 10240] },
+  "rules": [
+    {
+      "id": "R01",
+      "priority": 1,
+      "description": "Audit restricted finance documents uploaded through the web.",
+      "conditions": {
+        "user_group": "Finance",
+        "data_classification": "Restricted",
+        "content_type": "Document",
+        "channel": "Web",
+        "destination_trust": "Untrusted"
+      },
+      "action": "Audit"
+    },
+    {
+      "id": "R02",
+      "priority": 2,
+      "description": "Block all restricted finance uploads to untrusted web destinations.",
+      "conditions": {
+        "user_group": "Finance",
+        "data_classification": "Restricted",
+        "channel": "Web",
+        "destination_trust": "Untrusted"
+      },
+      "action": "Block"
+    },
+    {
+      "id": "R03",
+      "priority": 3,
+      "description": "Block restricted USB transfers, except the security group.",
+      "conditions": {
+        "data_classification": "Restricted",
+        "channel": "USB",
+        "destination_trust": "Untrusted",
+        "device_trust": "Unmanaged"
+      },
+      "exceptions": [{ "user_group": "Security" }],
+      "action": "Block"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-USB-01",
+      "description": "Every restricted transfer to unmanaged USB media must be blocked.",
+      "conditions": {
+        "data_classification": "Restricted",
+        "channel": "USB",
+        "destination_trust": "Untrusted",
+        "device_trust": "Unmanaged"
+      },
+      "minimum_action": "Block"
+    }
+  ]
+}

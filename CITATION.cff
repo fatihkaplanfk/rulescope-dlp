@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this artifact, please cite the accompanying PolicyLint-DLP manuscript."
+title: "PolicyLint-DLP: Explainable Solver-Aided Verification and Trace-Based Mutation Testing of Multi-Channel Enterprise Data Loss Prevention Policies"
+type: software
+authors:
+  - given-names: Fatih
+    family-names: Kaplan
+    email: fatih.kaplan@eminevim.com.tr
+    affiliation: Eminevim
+    orcid: "https://orcid.org/0000-0002-7877-815X"
+  - given-names: Abdurrahim
+    family-names: Özel
+    email: abdurrahim.ozel@eminevim.com.tr
+    affiliation: Eminevim
+  - given-names: Dursun Poyraz
+    family-names: Gümüş
+    email: poyraz.gumus@eminevim.com.tr
+    affiliation: Eminevim
+  - given-names: Furkan Çağlar
+    family-names: Çelik
+    email: caglar.celik@eminevim.com.tr
+    affiliation: Eminevim
+version: 0.2.1
+date-released: 2026-08-12
+repository-code: "https://github.com/fatihkaplanfk/policyLint-dlp"
+license: MIT

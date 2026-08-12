@@ -1,0 +1,178 @@
+{
+  "size": 100,
+  "seed": 9,
+  "samples": 10000,
+  "expected_ids": [
+    "action_conflict:CF1:CF2",
+    "coverage_gap:EX_REQ",
+    "coverage_gap:GAP_REQ",
+    "exception_leakage:EX1:0:EX_REQ",
+    "redundancy:SH1",
+    "redundancy:SH2",
+    "shadowing:SH2"
+  ],
+  "exact_ids": [
+    "action_conflict:CF1:CF2",
+    "coverage_gap:EX_REQ",
+    "coverage_gap:GAP_REQ",
+    "exception_leakage:EX1:0:EX_REQ",
+    "redundancy:SH1",
+    "redundancy:SH2",
+    "shadowing:SH2"
+  ],
+  "random_ids": [
+    "action_conflict:CF1:CF2"
+  ],
+  "exact": {
+    "elapsed_ms": 406.676912,
+    "rss_mb": 231.26953125,
+    "tp": 7,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1,
+    "recall": 1,
+    "f1": 1
+  },
+  "random": {
+    "elapsed_ms": 893.591928,
+    "rss_mb": 251.0625,
+    "tp": 1,
+    "fp": 0,
+    "fn": 6,
+    "precision": 1,
+    "recall": 0.14285714285714285,
+    "f1": 0.25
+  },
+  "representative_findings": [
+    {
+      "id": "action_conflict:CF1:CF2",
+      "type": "action_conflict",
+      "rules": [
+        "CF1",
+        "CF2"
+      ],
+      "actions": [
+        "Audit",
+        "Block"
+      ],
+      "witness": {
+        "user_group": "Finance",
+        "data_classification": "Restricted",
+        "content_type": "Archive",
+        "channel": "Web",
+        "destination_trust": "Untrusted",
+        "device_trust": "Managed",
+        "file_type": "PDF",
+        "size_mb": 6158
+      },
+      "explanation": "CF1 and CF2 match the same transfer but prescribe Audit and Block."
+    },
+    {
+      "id": "shadowing:SH2",
+      "type": "shadowing",
+      "rule": "SH2",
+      "shadowed_by": [
+        "SH1"
+      ],
+      "witness": {
+        "user_group": "HR",
+        "data_classification": "Restricted",
+        "content_type": "Archive",
+        "channel": "Email",
+        "destination_trust": "Untrusted",
+        "device_trust": "Managed",
+        "file_type": "DOCX",
+        "size_mb": 6158
+      },
+      "explanation": "SH2 is unreachable under first-match evaluation because earlier rule(s) SH1 cover every event it can match."
+    },
+    {
+      "id": "redundancy:SH1",
+      "type": "redundancy",
+      "rule": "SH1",
+      "witness": {
+        "user_group": "HR",
+        "data_classification": "Restricted",
+        "content_type": "Archive",
+        "channel": "Email",
+        "destination_trust": "Untrusted",
+        "device_trust": "Managed",
+        "file_type": "DOCX",
+        "size_mb": 6158
+      },
+      "explanation": "Removing SH1 does not change the policy decision for any valid transfer under first_match semantics."
+    },
+    {
+      "id": "redundancy:SH2",
+      "type": "redundancy",
+      "rule": "SH2",
+      "witness": {
+        "user_group": "HR",
+        "data_classification": "Restricted",
+        "content_type": "Archive",
+        "channel": "Email",
+        "destination_trust": "Untrusted",
+        "device_trust": "Managed",
+        "file_type": "DOCX",
+        "size_mb": 6158
+      },
+      "explanation": "Removing SH2 does not change the policy decision for any valid transfer under first_match semantics."
+    },
+    {
+      "id": "coverage_gap:GAP_REQ",
+      "type": "coverage_gap",
+      "requirement": "GAP_REQ",
+      "minimum_action": "Block",
+      "effective_action": "Permit",
+      "witness": {
+        "user_group": "Security",
+        "data_classification": "Restricted",
+        "content_type": "Archive",
+        "channel": "USB",
+        "destination_trust": "Untrusted",
+        "device_trust": "Unmanaged",
+        "file_type": "CSV",
+        "size_mb": 6158
+      },
+      "explanation": "GAP_REQ requires at least Block, but the witness is evaluated as Permit."
+    },
+    {
+      "id": "coverage_gap:EX_REQ",
+      "type": "coverage_gap",
+      "requirement": "EX_REQ",
+      "minimum_action": "Block",
+      "effective_action": "Permit",
+      "witness": {
+        "user_group": "Executive",
+        "data_classification": "Restricted",
+        "content_type": "Archive",
+        "channel": "CloudUpload",
+        "destination_trust": "Untrusted",
+        "device_trust": "Managed",
+        "file_type": "ZIP",
+        "size_mb": 6158
+      },
+      "explanation": "EX_REQ requires at least Block, but the witness is evaluated as Permit."
+    },
+    {
+      "id": "exception_leakage:EX1:0:EX_REQ",
+      "type": "exception_leakage",
+      "rule": "EX1",
+      "exception_index": 0,
+      "requirement": "EX_REQ",
+      "minimum_action": "Block",
+      "effective_action": "Permit",
+      "witness": {
+        "user_group": "Executive",
+        "data_classification": "Restricted",
+        "content_type": "Archive",
+        "channel": "CloudUpload",
+        "destination_trust": "Untrusted",
+        "device_trust": "Managed",
+        "file_type": "ZIP",
+        "size_mb": 6158
+      },
+      "explanation": "Exception 0 in EX1 admits a transfer protected by EX_REQ; its effective action falls to Permit."
+    }
+  ]
+}
