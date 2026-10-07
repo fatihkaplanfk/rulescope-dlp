@@ -120,7 +120,7 @@ export function generateBenchmarkPolicy(ruleCount, seed) {
 
   return {
     policy: loadAndValidatePolicy({
-      name: `PolicyLint-DLP controlled benchmark n=${ruleCount} seed=${seed}`,
+      name: `RuleScope-DLP controlled benchmark n=${ruleCount} seed=${seed}`,
       version: "1.0",
       semantics: "first_match",
       default_action: "Permit",

@@ -10,7 +10,7 @@ async function main() {
   const { init } = z3Solver;
   const [command, input, ...flags] = process.argv.slice(2);
   if (command !== "analyze" || !input) {
-    console.error("Usage: policylint-dlp analyze <policy.json> [--format text|json] [--semantics first_match|most_restrictive]");
+    console.error("Usage: rulescope-dlp analyze <policy.json> [--format text|json] [--semantics first_match|most_restrictive]");
     process.exitCode = 2;
     return;
   }

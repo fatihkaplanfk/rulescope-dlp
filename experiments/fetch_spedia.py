@@ -49,7 +49,7 @@ def main() -> int:
         return 0
 
     partial = output.with_suffix(output.suffix + ".part")
-    request = urllib.request.Request(URL, headers={"User-Agent": "PolicyLint-DLP/0.2"})
+    request = urllib.request.Request(URL, headers={"User-Agent": "RuleScope-DLP/0.2"})
     try:
         with urllib.request.urlopen(request, timeout=120) as response, partial.open("wb") as target:
             while chunk := response.read(1024 * 1024):

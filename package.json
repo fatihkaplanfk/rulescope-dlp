@@ -1,11 +1,11 @@
 {
-  "name": "policylint-dlp",
+  "name": "rulescope-dlp",
   "version": "0.2.1",
   "description": "Explainable solver-aided verification of multi-channel enterprise DLP policies",
   "type": "module",
   "main": "src/index.js",
   "bin": {
-    "policylint-dlp": "src/cli.js"
+    "rulescope-dlp": "src/cli.js"
   },
   "scripts": {
     "test": "node --test",
@@ -34,11 +34,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fatihkaplanfk/policyLint-dlp.git"
+    "url": "git+https://github.com/fatihkaplanfk/rulescope-dlp.git"
   },
-  "homepage": "https://github.com/fatihkaplanfk/policyLint-dlp#readme",
+  "homepage": "https://github.com/fatihkaplanfk/rulescope-dlp#readme",
   "bugs": {
-    "url": "https://github.com/fatihkaplanfk/policyLint-dlp/issues"
+    "url": "https://github.com/fatihkaplanfk/rulescope-dlp/issues"
   },
   "license": "MIT",
   "engines": {

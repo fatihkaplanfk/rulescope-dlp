@@ -76,7 +76,7 @@ def runtime_figure(summary):
     fig, ax = plt.subplots(figsize=(7.2, 4.2))
     ax.errorbar(
         x, summary["exact_elapsed_ms_mean"], yerr=summary["exact_elapsed_ms_sd"],
-        marker="o", linewidth=2, capsize=3, color="#1F77B4", label="PolicyLint-DLP (SMT)"
+        marker="o", linewidth=2, capsize=3, color="#1F77B4", label="RuleScope-DLP (SMT)"
     )
     ax.errorbar(
         x, summary["random_elapsed_ms_mean"], yerr=summary["random_elapsed_ms_sd"],
@@ -100,7 +100,7 @@ def effectiveness_figure(summary):
     fig, ax = plt.subplots(figsize=(7.2, 4.2))
     ax.bar(
         x - width / 2, summary["exact_f1_mean"], width,
-        yerr=summary["exact_f1_sd"], capsize=3, label="PolicyLint-DLP (SMT)", color="#1F77B4"
+        yerr=summary["exact_f1_sd"], capsize=3, label="RuleScope-DLP (SMT)", color="#1F77B4"
     )
     ax.bar(
         x + width / 2, summary["random_f1_mean"], width,

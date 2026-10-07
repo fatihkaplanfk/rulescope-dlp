@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Normalize SPEDIA records into vendor-neutral PolicyLint-DLP events.
+"""Normalize SPEDIA records into vendor-neutral RuleScope-DLP events.
 
 The transformation deliberately excludes Agent_name and User. Anomaly is kept
 only as an outcome label and must never be consumed by policy conditions.

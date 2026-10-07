@@ -1,6 +1,6 @@
-# PolicyLint-DLP
+# RuleScope-DLP
 
-PolicyLint-DLP is a research prototype for explainable, solver-aided verification of multi-channel enterprise data loss prevention policies. It translates a vendor-neutral JSON policy into SMT constraints and returns concrete witness transfers for five anomaly classes:
+RuleScope-DLP is a research prototype for explainable, solver-aided verification of multi-channel enterprise data loss prevention policies. It translates a vendor-neutral JSON policy into SMT constraints and returns concrete witness transfers for five anomaly classes:
 
 - action conflicts;
 - first-match shadowing;

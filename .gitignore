@@ -1,2 +1,3 @@
 data/raw/*.csv
 results/spedia_normalized.jsonl
+node_modules/

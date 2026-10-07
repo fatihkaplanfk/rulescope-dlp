@@ -9,6 +9,6 @@ annotated English release of the SPEDIA insider-threat dataset.
 - Expected file size: 45,703,322 bytes
 - Expected MD5: `e01e0baaf3b523a0b493fc9c52af2b1c`
 
-The original creators retain copyright in the dataset. PolicyLint-DLP does not
+The original creators retain copyright in the dataset. RuleScope-DLP does not
 change the dataset's license. When the CSV is redistributed, this attribution,
 the DOI, and the CC BY 4.0 notice must accompany it.

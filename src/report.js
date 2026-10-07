@@ -4,7 +4,7 @@ function line(label, value) {
 
 export function formatTextReport(report) {
   const output = [
-    "PolicyLint-DLP Analysis Report",
+    "RuleScope-DLP Analysis Report",
     "=".repeat(30),
     line("Policy", report.policy),
     line("Semantics", report.semantics),
