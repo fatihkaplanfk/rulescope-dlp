@@ -129,11 +129,11 @@ those matching rules; the default action does not compete with them.
 
 ### Reproduce the SPEDIA trace replay
 
-The raw SPEDIA CSV is not redistributed. Download the CC BY 4.0 annotated release, verify its published file identity, normalize only DLP-relevant email, HTTP, file, and removable-device records, and run the experiment:
+An unmodified copy of the annotated SPEDIA CSV (CC BY 4.0) is included at the repository root as `logs_SPEDIA_annotated_en.csv`. Alternatively, download the release and verify its published file identity. The experiment normalizes only DLP-relevant email, HTTP, file, and removable-device records:
 
 ```bash
-python experiments/fetch_spedia.py
-npm run spedia
+python experiments/fetch_spedia.py      # or use the included copy:
+npm run spedia                          # npm run spedia -- --dataset logs_SPEDIA_annotated_en.csv
 npm run figures
 ```
 
@@ -144,7 +144,7 @@ The experiment replays 56,737 records through a clean reference policy and four 
 - `src/`: schema, evaluator, Z3 analyzer, CLI, reports, and random-testing baseline
 - `benchmark/`: deterministic controlled-policy generator and planted ground truth
 - `experiments/`: benchmark runner and figure generator
-- `data/`: external-dataset citation, license, checksum, and acquisition instructions (raw data excluded)
+- `data/`: external-dataset citation, license, checksum, and acquisition instructions (the SPEDIA CSV itself is at the repository root)
 - `examples/`: minimal multi-channel DLP policy
 - `test/`: unit and integration tests
 - `results/`: raw runs, summaries, witnesses, and figures reported in the manuscript
