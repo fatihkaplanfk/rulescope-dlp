@@ -1,0 +1,11 @@
+{"wall_ms":43.903,"event":"process_start"}
+{"wall_ms":121.10719999999999,"event":"init_done"}
+{"wall_ms":121.7033,"event":"stage_start","stage":"action_conflict","analysis_ms":0.0613,"queries":{"total":0,"sat":0,"unsat":0,"unknown":0},"by_check":{}}
+{"wall_ms":5130.3586000000005,"event":"query","stage":"action_conflict","analysis_ms":5008.723,"queries":{"total":316,"sat":316,"unsat":0,"unknown":0},"by_check":{"action_conflict":{"sat":316,"unsat":0,"unknown":0}}}
+{"wall_ms":10130.8393,"event":"query","stage":"action_conflict","analysis_ms":10009.2255,"queries":{"total":638,"sat":636,"unsat":2,"unknown":0},"by_check":{"action_conflict":{"sat":636,"unsat":2,"unknown":0}}}
+{"wall_ms":15131.242,"event":"query","stage":"action_conflict","analysis_ms":15009.5782,"queries":{"total":946,"sat":944,"unsat":2,"unknown":0},"by_check":{"action_conflict":{"sat":944,"unsat":2,"unknown":0}}}
+{"wall_ms":20148.6903,"event":"query","stage":"action_conflict","analysis_ms":20027.0651,"queries":{"total":1255,"sat":1249,"unsat":6,"unknown":0},"by_check":{"action_conflict":{"sat":1249,"unsat":6,"unknown":0}}}
+{"wall_ms":23498.7429,"event":"stage_end","stage":"action_conflict","analysis_ms":23377.1162,"queries":{"total":1461,"sat":1449,"unsat":12,"unknown":0},"by_check":{"action_conflict":{"sat":1449,"unsat":12,"unknown":0}}}
+{"wall_ms":23499.0465,"event":"stage_start","stage":"shadowing","analysis_ms":23377.4388,"queries":{"total":1461,"sat":1449,"unsat":12,"unknown":0},"by_check":{"action_conflict":{"sat":1449,"unsat":12,"unknown":0}}}
+{"wall_ms":25681.901700000002,"event":"stage_end","stage":"shadowing","analysis_ms":25560.2859,"queries":{"total":1589,"sat":1547,"unsat":42,"unknown":0},"by_check":{"action_conflict":{"sat":1449,"unsat":12,"unknown":0},"shadowing_reachability":{"sat":68,"unsat":30,"unknown":0},"shadowing_representative":{"sat":30,"unsat":0,"unknown":0}}}
+{"wall_ms":25682.3257,"event":"stage_start","stage":"redundancy","analysis_ms":25560.7149,"queries":{"total":1589,"sat":1547,"unsat":42,"unknown":0},"by_check":{"action_conflict":{"sat":1449,"unsat":12,"unknown":0},"shadowing_reachability":{"sat":68,"unsat":30,"unknown":0},"shadowing_representative":{"sat":30,"unsat":0,"unknown":0}}}

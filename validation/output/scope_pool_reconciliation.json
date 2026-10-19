@@ -1,0 +1,738 @@
+{
+  "results": {
+    "REQ_EMAIL_EXTERNAL_ATTACHMENT": {
+      "table3": 1851,
+      "replay_scope_recomputed": 1851,
+      "adapter_scope_python": 1851,
+      "replay_equals_python_scope": true,
+      "pool": 1846,
+      "reported_pool": 1846,
+      "difference": [
+        "0994912a-153f-4f22-baff-eb0c92271706",
+        "244c00c6-b942-432c-b671-19d7da7d16d2",
+        "35613c02-b72c-4db6-90eb-42e548f5c2f4",
+        "86fe8d74-fe6f-4fd9-a402-0cd413854ab4",
+        "8a2be70a-452c-4ade-9971-0c70698e5320"
+      ],
+      "pool_not_in_replay_scope": [],
+      "difference_equals_general_sample_in_scope": true
+    },
+    "REQ_CLOUD_TRANSFER": {
+      "table3": 445,
+      "replay_scope_recomputed": 445,
+      "adapter_scope_python": 445,
+      "replay_equals_python_scope": true,
+      "pool": 445,
+      "reported_pool": 445,
+      "difference": [],
+      "pool_not_in_replay_scope": [],
+      "difference_equals_general_sample_in_scope": true
+    },
+    "REQ_USB_CONNECT": {
+      "table3": 2178,
+      "replay_scope_recomputed": 2178,
+      "adapter_scope_python": 2178,
+      "replay_equals_python_scope": true,
+      "pool": 2153,
+      "reported_pool": 2153,
+      "difference": [
+        "00efc595-b0fb-423c-8972-4126ef8c1037",
+        "04d95e27-6155-4b38-834e-71b57b5f1268",
+        "16aae04a-29f6-416b-99ab-6bbd83f9f42d",
+        "2235a696-75df-4f57-a569-109f353bfa11",
+        "232bfe27-903e-4bce-8152-027fce1b8cb7",
+        "247f9811-ff0d-4fc7-b120-71e5bcda45d0",
+        "2c450cc3-9766-4c7d-8204-cccca91d63c8",
+        "333f7786-6c0e-43df-bc99-32072407723c",
+        "39d85f67-ddd2-403a-9a53-fd3990afccdb",
+        "3d01e57e-2e5f-4cc3-a9c9-cb3f74a51809",
+        "5b913965-bdd4-4e0c-bcbd-fd3bc8db01b3",
+        "71f2682b-494e-440e-b140-5324f4ff5e94",
+        "75982906-6d65-43a6-9728-21aa5b76add5",
+        "79a49207-aa5f-401e-99a8-15f6b8547f63",
+        "87353d61-6413-4be3-a03f-3851a3a087ac",
+        "90452365-ade4-4a29-8b53-33c33ec46ff6",
+        "95db5122-8b84-42d7-92a7-6fa47d8337bf",
+        "9777bbaf-ec37-4088-88ec-753c10aa67fd",
+        "a5195cc7-93f3-420f-9c67-b26f60e256a7",
+        "a9d8176a-b58c-48c5-bfe1-d2f1a116a983",
+        "b8ea8dc1-26e0-4edc-a438-65070e87fccf",
+        "d09b38ae-fb20-4422-a733-e0f86d6e6ef0",
+        "ed9e3257-16f2-4061-9848-b7f231975c8e",
+        "eebf350b-6ef1-498d-acab-29ff5f3f56b1",
+        "f165e763-ab29-43a6-a887-84882e795e3a"
+      ],
+      "pool_not_in_replay_scope": [],
+      "difference_equals_general_sample_in_scope": true
+    }
+  },
+  "details": {
+    "REQ_EMAIL_EXTERNAL_ATTACHMENT": [
+      {
+        "source_record_id": "0994912a-153f-4f22-baff-eb0c92271706",
+        "event_id": "143929131077ab41",
+        "activity": "email",
+        "action": "Email sent",
+        "metadata": "recipient domains {'To': 'netzero.com;juno.com;netzero.com'}; Attachments=1.0; sender domain=netzero.com",
+        "replay_requirements": [
+          "REQ_EMAIL_EXTERNAL_ATTACHMENT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "Email",
+          "content_type": "Attachment",
+          "data_classification": "Restricted",
+          "destination_trust": "Untrusted",
+          "device_trust": "Managed",
+          "file_type": "OTHER",
+          "size_mb": 1
+        },
+        "general_sample_no": "3",
+        "general_sample_scope": "REQ_EMAIL_EXTERNAL_ATTACHMENT"
+      },
+      {
+        "source_record_id": "244c00c6-b942-432c-b671-19d7da7d16d2",
+        "event_id": "b32c3e0f3019c0b0",
+        "activity": "email",
+        "action": "Email sent",
+        "metadata": "recipient domains {'To': 'cox.net'}; Attachments=1.0; sender domain=netzero.com",
+        "replay_requirements": [
+          "REQ_EMAIL_EXTERNAL_ATTACHMENT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "Email",
+          "content_type": "Attachment",
+          "data_classification": "Restricted",
+          "destination_trust": "Untrusted",
+          "device_trust": "Managed",
+          "file_type": "OTHER",
+          "size_mb": 1
+        },
+        "general_sample_no": "6",
+        "general_sample_scope": "REQ_EMAIL_EXTERNAL_ATTACHMENT"
+      },
+      {
+        "source_record_id": "35613c02-b72c-4db6-90eb-42e548f5c2f4",
+        "event_id": "96c3fc402baab1c0",
+        "activity": "email",
+        "action": "Email sent",
+        "metadata": "recipient domains {'To': 'dtaa.com;dtaa.com', 'Cc': 'raytheon.com'}; Attachments=1.0; sender domain=dtaa.com",
+        "replay_requirements": [
+          "REQ_EMAIL_EXTERNAL_ATTACHMENT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "Email",
+          "content_type": "Attachment",
+          "data_classification": "Restricted",
+          "destination_trust": "Untrusted",
+          "device_trust": "Managed",
+          "file_type": "OTHER",
+          "size_mb": 1
+        },
+        "general_sample_no": "11",
+        "general_sample_scope": "REQ_EMAIL_EXTERNAL_ATTACHMENT"
+      },
+      {
+        "source_record_id": "86fe8d74-fe6f-4fd9-a402-0cd413854ab4",
+        "event_id": "56c568a38102bee7",
+        "activity": "email",
+        "action": "Email sent",
+        "metadata": "recipient domains {'To': 'dtaa.com;dtaa.com', 'Cc': 'dtaa.com;northropgrumman.com', 'Bcc': 'dtaa.com'}; Attachments=1.0; sender domain=dtaa.com",
+        "replay_requirements": [
+          "REQ_EMAIL_EXTERNAL_ATTACHMENT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "Email",
+          "content_type": "Attachment",
+          "data_classification": "Restricted",
+          "destination_trust": "Untrusted",
+          "device_trust": "Managed",
+          "file_type": "OTHER",
+          "size_mb": 1
+        },
+        "general_sample_no": "25",
+        "general_sample_scope": "REQ_EMAIL_EXTERNAL_ATTACHMENT"
+      },
+      {
+        "source_record_id": "8a2be70a-452c-4ade-9971-0c70698e5320",
+        "event_id": "84eeabef2d6a1e07",
+        "activity": "email",
+        "action": "Email sent",
+        "metadata": "recipient domains {'To': 'juno.com;gmail.com;gmail.com;sbcglobal.net', 'Cc': 'yahoo.com'}; Attachments=1.0; sender domain=verizon.net",
+        "replay_requirements": [
+          "REQ_EMAIL_EXTERNAL_ATTACHMENT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "Email",
+          "content_type": "Attachment",
+          "data_classification": "Restricted",
+          "destination_trust": "Untrusted",
+          "device_trust": "Managed",
+          "file_type": "OTHER",
+          "size_mb": 1
+        },
+        "general_sample_no": "26",
+        "general_sample_scope": "REQ_EMAIL_EXTERNAL_ATTACHMENT"
+      }
+    ],
+    "REQ_USB_CONNECT": [
+      {
+        "source_record_id": "00efc595-b0fb-423c-8972-4126ef8c1037",
+        "event_id": "b7834ae017eb2532",
+        "activity": "device",
+        "action": "Connect",
+        "metadata": "Action=Connect; decoder=cert; no device id/trust field",
+        "replay_requirements": [
+          "REQ_USB_CONNECT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "USB",
+          "content_type": "DeviceConnect",
+          "data_classification": "Internal",
+          "destination_trust": "Untrusted",
+          "device_trust": "Unmanaged",
+          "file_type": "OTHER",
+          "size_mb": 0
+        },
+        "general_sample_no": "151",
+        "general_sample_scope": "REQ_USB_CONNECT"
+      },
+      {
+        "source_record_id": "04d95e27-6155-4b38-834e-71b57b5f1268",
+        "event_id": "928198d28582cd00",
+        "activity": "device",
+        "action": "Connect",
+        "metadata": "Action=Connect; decoder=cert; no device id/trust field",
+        "replay_requirements": [
+          "REQ_USB_CONNECT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "USB",
+          "content_type": "DeviceConnect",
+          "data_classification": "Internal",
+          "destination_trust": "Untrusted",
+          "device_trust": "Unmanaged",
+          "file_type": "OTHER",
+          "size_mb": 0
+        },
+        "general_sample_no": "152",
+        "general_sample_scope": "REQ_USB_CONNECT"
+      },
+      {
+        "source_record_id": "16aae04a-29f6-416b-99ab-6bbd83f9f42d",
+        "event_id": "d301e23dae0d9978",
+        "activity": "device",
+        "action": "Connect",
+        "metadata": "Action=Connect; decoder=cert; no device id/trust field",
+        "replay_requirements": [
+          "REQ_USB_CONNECT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "USB",
+          "content_type": "DeviceConnect",
+          "data_classification": "Internal",
+          "destination_trust": "Untrusted",
+          "device_trust": "Unmanaged",
+          "file_type": "OTHER",
+          "size_mb": 0
+        },
+        "general_sample_no": "157",
+        "general_sample_scope": "REQ_USB_CONNECT"
+      },
+      {
+        "source_record_id": "2235a696-75df-4f57-a569-109f353bfa11",
+        "event_id": "0c57a49c7559993e",
+        "activity": "device",
+        "action": "Connect",
+        "metadata": "Action=Connect; decoder=cert; no device id/trust field",
+        "replay_requirements": [
+          "REQ_USB_CONNECT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "USB",
+          "content_type": "DeviceConnect",
+          "data_classification": "Internal",
+          "destination_trust": "Untrusted",
+          "device_trust": "Unmanaged",
+          "file_type": "OTHER",
+          "size_mb": 0
+        },
+        "general_sample_no": "160",
+        "general_sample_scope": "REQ_USB_CONNECT"
+      },
+      {
+        "source_record_id": "232bfe27-903e-4bce-8152-027fce1b8cb7",
+        "event_id": "ebe40b07cd5453a9",
+        "activity": "device",
+        "action": "Connect",
+        "metadata": "Action=Connect; decoder=cert; no device id/trust field",
+        "replay_requirements": [
+          "REQ_USB_CONNECT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "USB",
+          "content_type": "DeviceConnect",
+          "data_classification": "Internal",
+          "destination_trust": "Untrusted",
+          "device_trust": "Unmanaged",
+          "file_type": "OTHER",
+          "size_mb": 0
+        },
+        "general_sample_no": "161",
+        "general_sample_scope": "REQ_USB_CONNECT"
+      },
+      {
+        "source_record_id": "247f9811-ff0d-4fc7-b120-71e5bcda45d0",
+        "event_id": "57c3e3ffef663719",
+        "activity": "device",
+        "action": "Connect",
+        "metadata": "Action=Connect; decoder=cert; no device id/trust field",
+        "replay_requirements": [
+          "REQ_USB_CONNECT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "USB",
+          "content_type": "DeviceConnect",
+          "data_classification": "Internal",
+          "destination_trust": "Untrusted",
+          "device_trust": "Unmanaged",
+          "file_type": "OTHER",
+          "size_mb": 0
+        },
+        "general_sample_no": "162",
+        "general_sample_scope": "REQ_USB_CONNECT"
+      },
+      {
+        "source_record_id": "2c450cc3-9766-4c7d-8204-cccca91d63c8",
+        "event_id": "a17c572edd420d7c",
+        "activity": "device",
+        "action": "Connect",
+        "metadata": "Action=Connect; decoder=cert; no device id/trust field",
+        "replay_requirements": [
+          "REQ_USB_CONNECT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "USB",
+          "content_type": "DeviceConnect",
+          "data_classification": "Internal",
+          "destination_trust": "Untrusted",
+          "device_trust": "Unmanaged",
+          "file_type": "OTHER",
+          "size_mb": 0
+        },
+        "general_sample_no": "163",
+        "general_sample_scope": "REQ_USB_CONNECT"
+      },
+      {
+        "source_record_id": "333f7786-6c0e-43df-bc99-32072407723c",
+        "event_id": "2a5af3c261819954",
+        "activity": "device",
+        "action": "Connect",
+        "metadata": "Action=Connect; decoder=cert; no device id/trust field",
+        "replay_requirements": [
+          "REQ_USB_CONNECT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "USB",
+          "content_type": "DeviceConnect",
+          "data_classification": "Internal",
+          "destination_trust": "Untrusted",
+          "device_trust": "Unmanaged",
+          "file_type": "OTHER",
+          "size_mb": 0
+        },
+        "general_sample_no": "165",
+        "general_sample_scope": "REQ_USB_CONNECT"
+      },
+      {
+        "source_record_id": "39d85f67-ddd2-403a-9a53-fd3990afccdb",
+        "event_id": "32360aadbc26b76e",
+        "activity": "device",
+        "action": "Connect",
+        "metadata": "Action=Connect; decoder=cert; no device id/trust field",
+        "replay_requirements": [
+          "REQ_USB_CONNECT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "USB",
+          "content_type": "DeviceConnect",
+          "data_classification": "Internal",
+          "destination_trust": "Untrusted",
+          "device_trust": "Unmanaged",
+          "file_type": "OTHER",
+          "size_mb": 0
+        },
+        "general_sample_no": "166",
+        "general_sample_scope": "REQ_USB_CONNECT"
+      },
+      {
+        "source_record_id": "3d01e57e-2e5f-4cc3-a9c9-cb3f74a51809",
+        "event_id": "f71191ac737726f4",
+        "activity": "device",
+        "action": "Connect",
+        "metadata": "Action=Connect; decoder=cert; no device id/trust field",
+        "replay_requirements": [
+          "REQ_USB_CONNECT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "USB",
+          "content_type": "DeviceConnect",
+          "data_classification": "Internal",
+          "destination_trust": "Untrusted",
+          "device_trust": "Unmanaged",
+          "file_type": "OTHER",
+          "size_mb": 0
+        },
+        "general_sample_no": "167",
+        "general_sample_scope": "REQ_USB_CONNECT"
+      },
+      {
+        "source_record_id": "5b913965-bdd4-4e0c-bcbd-fd3bc8db01b3",
+        "event_id": "4b459b8313d8e26b",
+        "activity": "device",
+        "action": "Connect",
+        "metadata": "Action=Connect; decoder=cert; no device id/trust field",
+        "replay_requirements": [
+          "REQ_USB_CONNECT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "USB",
+          "content_type": "DeviceConnect",
+          "data_classification": "Internal",
+          "destination_trust": "Untrusted",
+          "device_trust": "Unmanaged",
+          "file_type": "OTHER",
+          "size_mb": 0
+        },
+        "general_sample_no": "171",
+        "general_sample_scope": "REQ_USB_CONNECT"
+      },
+      {
+        "source_record_id": "71f2682b-494e-440e-b140-5324f4ff5e94",
+        "event_id": "3825ac9966fac5f2",
+        "activity": "device",
+        "action": "Connect",
+        "metadata": "Action=Connect; decoder=cert; no device id/trust field",
+        "replay_requirements": [
+          "REQ_USB_CONNECT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "USB",
+          "content_type": "DeviceConnect",
+          "data_classification": "Internal",
+          "destination_trust": "Untrusted",
+          "device_trust": "Unmanaged",
+          "file_type": "OTHER",
+          "size_mb": 0
+        },
+        "general_sample_no": "175",
+        "general_sample_scope": "REQ_USB_CONNECT"
+      },
+      {
+        "source_record_id": "75982906-6d65-43a6-9728-21aa5b76add5",
+        "event_id": "11bbccea2e1eae91",
+        "activity": "device",
+        "action": "Connect",
+        "metadata": "Action=Connect; decoder=cert; no device id/trust field",
+        "replay_requirements": [
+          "REQ_USB_CONNECT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "USB",
+          "content_type": "DeviceConnect",
+          "data_classification": "Internal",
+          "destination_trust": "Untrusted",
+          "device_trust": "Unmanaged",
+          "file_type": "OTHER",
+          "size_mb": 0
+        },
+        "general_sample_no": "176",
+        "general_sample_scope": "REQ_USB_CONNECT"
+      },
+      {
+        "source_record_id": "79a49207-aa5f-401e-99a8-15f6b8547f63",
+        "event_id": "46286fb7a21fd4c0",
+        "activity": "device",
+        "action": "Connect",
+        "metadata": "Action=Connect; decoder=cert; no device id/trust field",
+        "replay_requirements": [
+          "REQ_USB_CONNECT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "USB",
+          "content_type": "DeviceConnect",
+          "data_classification": "Internal",
+          "destination_trust": "Untrusted",
+          "device_trust": "Unmanaged",
+          "file_type": "OTHER",
+          "size_mb": 0
+        },
+        "general_sample_no": "178",
+        "general_sample_scope": "REQ_USB_CONNECT"
+      },
+      {
+        "source_record_id": "87353d61-6413-4be3-a03f-3851a3a087ac",
+        "event_id": "b82bab0ff66ecacd",
+        "activity": "device",
+        "action": "Connect",
+        "metadata": "Action=Connect; decoder=cert; no device id/trust field",
+        "replay_requirements": [
+          "REQ_USB_CONNECT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "USB",
+          "content_type": "DeviceConnect",
+          "data_classification": "Internal",
+          "destination_trust": "Untrusted",
+          "device_trust": "Unmanaged",
+          "file_type": "OTHER",
+          "size_mb": 0
+        },
+        "general_sample_no": "179",
+        "general_sample_scope": "REQ_USB_CONNECT"
+      },
+      {
+        "source_record_id": "90452365-ade4-4a29-8b53-33c33ec46ff6",
+        "event_id": "f26902f8776caf52",
+        "activity": "device",
+        "action": "Connect",
+        "metadata": "Action=Connect; decoder=cert; no device id/trust field",
+        "replay_requirements": [
+          "REQ_USB_CONNECT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "USB",
+          "content_type": "DeviceConnect",
+          "data_classification": "Internal",
+          "destination_trust": "Untrusted",
+          "device_trust": "Unmanaged",
+          "file_type": "OTHER",
+          "size_mb": 0
+        },
+        "general_sample_no": "182",
+        "general_sample_scope": "REQ_USB_CONNECT"
+      },
+      {
+        "source_record_id": "95db5122-8b84-42d7-92a7-6fa47d8337bf",
+        "event_id": "64d8c0ca98fba519",
+        "activity": "device",
+        "action": "Connect",
+        "metadata": "Action=Connect; decoder=cert; no device id/trust field",
+        "replay_requirements": [
+          "REQ_USB_CONNECT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "USB",
+          "content_type": "DeviceConnect",
+          "data_classification": "Internal",
+          "destination_trust": "Untrusted",
+          "device_trust": "Unmanaged",
+          "file_type": "OTHER",
+          "size_mb": 0
+        },
+        "general_sample_no": "183",
+        "general_sample_scope": "REQ_USB_CONNECT"
+      },
+      {
+        "source_record_id": "9777bbaf-ec37-4088-88ec-753c10aa67fd",
+        "event_id": "d3cb358f235bc9d1",
+        "activity": "device",
+        "action": "Connect",
+        "metadata": "Action=Connect; decoder=cert; no device id/trust field",
+        "replay_requirements": [
+          "REQ_USB_CONNECT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "USB",
+          "content_type": "DeviceConnect",
+          "data_classification": "Internal",
+          "destination_trust": "Untrusted",
+          "device_trust": "Unmanaged",
+          "file_type": "OTHER",
+          "size_mb": 0
+        },
+        "general_sample_no": "184",
+        "general_sample_scope": "REQ_USB_CONNECT"
+      },
+      {
+        "source_record_id": "a5195cc7-93f3-420f-9c67-b26f60e256a7",
+        "event_id": "ef37725a8fd57d21",
+        "activity": "device",
+        "action": "Connect",
+        "metadata": "Action=Connect; decoder=cert; no device id/trust field",
+        "replay_requirements": [
+          "REQ_USB_CONNECT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "USB",
+          "content_type": "DeviceConnect",
+          "data_classification": "Internal",
+          "destination_trust": "Untrusted",
+          "device_trust": "Unmanaged",
+          "file_type": "OTHER",
+          "size_mb": 0
+        },
+        "general_sample_no": "185",
+        "general_sample_scope": "REQ_USB_CONNECT"
+      },
+      {
+        "source_record_id": "a9d8176a-b58c-48c5-bfe1-d2f1a116a983",
+        "event_id": "a460f26e130803cb",
+        "activity": "device",
+        "action": "Connect",
+        "metadata": "Action=Connect; decoder=cert; no device id/trust field",
+        "replay_requirements": [
+          "REQ_USB_CONNECT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "USB",
+          "content_type": "DeviceConnect",
+          "data_classification": "Internal",
+          "destination_trust": "Untrusted",
+          "device_trust": "Unmanaged",
+          "file_type": "OTHER",
+          "size_mb": 0
+        },
+        "general_sample_no": "187",
+        "general_sample_scope": "REQ_USB_CONNECT"
+      },
+      {
+        "source_record_id": "b8ea8dc1-26e0-4edc-a438-65070e87fccf",
+        "event_id": "f2771a03475c6e13",
+        "activity": "device",
+        "action": "Connect",
+        "metadata": "Action=Connect; decoder=cert; no device id/trust field",
+        "replay_requirements": [
+          "REQ_USB_CONNECT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "USB",
+          "content_type": "DeviceConnect",
+          "data_classification": "Internal",
+          "destination_trust": "Untrusted",
+          "device_trust": "Unmanaged",
+          "file_type": "OTHER",
+          "size_mb": 0
+        },
+        "general_sample_no": "189",
+        "general_sample_scope": "REQ_USB_CONNECT"
+      },
+      {
+        "source_record_id": "d09b38ae-fb20-4422-a733-e0f86d6e6ef0",
+        "event_id": "3501195ff4a15435",
+        "activity": "device",
+        "action": "Connect",
+        "metadata": "Action=Connect; decoder=cert; no device id/trust field",
+        "replay_requirements": [
+          "REQ_USB_CONNECT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "USB",
+          "content_type": "DeviceConnect",
+          "data_classification": "Internal",
+          "destination_trust": "Untrusted",
+          "device_trust": "Unmanaged",
+          "file_type": "OTHER",
+          "size_mb": 0
+        },
+        "general_sample_no": "192",
+        "general_sample_scope": "REQ_USB_CONNECT"
+      },
+      {
+        "source_record_id": "ed9e3257-16f2-4061-9848-b7f231975c8e",
+        "event_id": "28deeaa8472c0c7b",
+        "activity": "device",
+        "action": "Connect",
+        "metadata": "Action=Connect; decoder=cert; no device id/trust field",
+        "replay_requirements": [
+          "REQ_USB_CONNECT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "USB",
+          "content_type": "DeviceConnect",
+          "data_classification": "Internal",
+          "destination_trust": "Untrusted",
+          "device_trust": "Unmanaged",
+          "file_type": "OTHER",
+          "size_mb": 0
+        },
+        "general_sample_no": "197",
+        "general_sample_scope": "REQ_USB_CONNECT"
+      },
+      {
+        "source_record_id": "eebf350b-6ef1-498d-acab-29ff5f3f56b1",
+        "event_id": "73c62554597d6913",
+        "activity": "device",
+        "action": "Connect",
+        "metadata": "Action=Connect; decoder=cert; no device id/trust field",
+        "replay_requirements": [
+          "REQ_USB_CONNECT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "USB",
+          "content_type": "DeviceConnect",
+          "data_classification": "Internal",
+          "destination_trust": "Untrusted",
+          "device_trust": "Unmanaged",
+          "file_type": "OTHER",
+          "size_mb": 0
+        },
+        "general_sample_no": "198",
+        "general_sample_scope": "REQ_USB_CONNECT"
+      },
+      {
+        "source_record_id": "f165e763-ab29-43a6-a887-84882e795e3a",
+        "event_id": "9a12cab06513d1ae",
+        "activity": "device",
+        "action": "Connect",
+        "metadata": "Action=Connect; decoder=cert; no device id/trust field",
+        "replay_requirements": [
+          "REQ_USB_CONNECT"
+        ],
+        "exposed_first_match": true,
+        "adapter": {
+          "channel": "USB",
+          "content_type": "DeviceConnect",
+          "data_classification": "Internal",
+          "destination_trust": "Untrusted",
+          "device_trust": "Unmanaged",
+          "file_type": "OTHER",
+          "size_mb": 0
+        },
+        "general_sample_no": "199",
+        "general_sample_scope": "REQ_USB_CONNECT"
+      }
+    ],
+    "REQ_CLOUD_TRANSFER": []
+  },
+  "aggregate_ok": true,
+  "sheet_matches_general_sample": true
+}

@@ -1,0 +1,85 @@
+{
+  "size": 1000,
+  "seed": 2,
+  "budget": 10000,
+  "execution_order": [
+    "guided",
+    "random"
+  ],
+  "random_seed": 3018,
+  "guided_seed": 107747,
+  "observation_copy_identical": true,
+  "expected_ids": [
+    "action_conflict:CF1:CF2",
+    "coverage_gap:EX_REQ",
+    "coverage_gap:GAP_REQ",
+    "exception_leakage:EX1:0:EX_REQ",
+    "redundancy:SH1",
+    "redundancy:SH2",
+    "shadowing:SH2"
+  ],
+  "random": {
+    "ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:GAP_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "evaluated_events": 10000,
+    "elapsed_ms": 5900.969199999998,
+    "coverage": {
+      "rules_matched": 296,
+      "first_match_selected": 296,
+      "rule_pairs_co_matched": 2,
+      "requirement_scopes_reached": 1,
+      "requirement_violations_observed": 1,
+      "exceptions_triggered": 0,
+      "distinct_final_actions": 5,
+      "total_coverage_keys": 601
+    },
+    "tp": 5,
+    "fp": 0,
+    "fn": 2,
+    "precision": 1,
+    "recall": 0.7142857142857143,
+    "f1": 0.8333333333333333,
+    "false_positive_ids": []
+  },
+  "guided": {
+    "ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:GAP_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "evaluated_events": 10000,
+    "elapsed_ms": 12482.8267,
+    "corpus_size": 588,
+    "last_new_coverage_at": 9996,
+    "operations": {
+      "categorical": 7901,
+      "splice": 4426,
+      "size": 5284,
+      "fresh": 1009
+    },
+    "coverage": {
+      "rules_matched": 587,
+      "first_match_selected": 587,
+      "rule_pairs_co_matched": 2,
+      "requirement_scopes_reached": 1,
+      "requirement_violations_observed": 1,
+      "exceptions_triggered": 0,
+      "distinct_final_actions": 5,
+      "total_coverage_keys": 1183
+    },
+    "tp": 5,
+    "fp": 0,
+    "fn": 2,
+    "precision": 1,
+    "recall": 0.7142857142857143,
+    "f1": 0.8333333333333333,
+    "false_positive_ids": []
+  }
+}

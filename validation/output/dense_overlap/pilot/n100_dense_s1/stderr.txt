@@ -1,0 +1,21 @@
+Aborted(Cannot enlarge memory arrays to size 2282541056 bytes (OOM). Either (1) compile with -sINITIAL_MEMORY=X with X higher than the current value 2147483648, (2) compile with -sALLOW_MEMORY_GROWTH which allows increasing the size at runtime, or (3) if you want malloc to return NULL (0) instead of this abort, compile with -sABORTING_MALLOC=0)
+worker: onmessage() captured an uncaught exception: RuntimeError: Aborted(Cannot enlarge memory arrays to size 2282541056 bytes (OOM). Either (1) compile with -sINITIAL_MEMORY=X with X higher than the current value 2147483648, (2) compile with -sALLOW_MEMORY_GROWTH which allows increasing the size at runtime, or (3) if you want malloc to return NULL (0) instead of this abort, compile with -sABORTING_MALLOC=0)
+RuntimeError: Aborted(Cannot enlarge memory arrays to size 2282541056 bytes (OOM). Either (1) compile with -sINITIAL_MEMORY=X with X higher than the current value 2147483648, (2) compile with -sALLOW_MEMORY_GROWTH which allows increasing the size at runtime, or (3) if you want malloc to return NULL (0) instead of this abort, compile with -sABORTING_MALLOC=0)
+    at abort (C:\Users\fatih.kaplan\Desktop\Arge Makale\Makale 10 Sakarya DLP\rulescope-dlp\node_modules\z3-solver\build\z3-built.js:848:11)
+    at abortOnCannotGrowMemory (C:\Users\fatih.kaplan\Desktop\Arge Makale\Makale 10 Sakarya DLP\rulescope-dlp\node_modules\z3-solver\build\z3-built.js:5313:7)
+    at _emscripten_resize_heap (C:\Users\fatih.kaplan\Desktop\Arge Makale\Makale 10 Sakarya DLP\rulescope-dlp\node_modules\z3-solver\build\z3-built.js:5319:7)
+    at z3-built.wasm.sbrk (wasm://wasm/z3-built.wasm-08092a9a:wasm-function[34889]:0x1a5837c)
+    at z3-built.wasm.emscripten_builtin_malloc (wasm://wasm/z3-built.wasm-08092a9a:wasm-function[34876]:0x1a56093)
+    at z3-built.wasm.dlrealloc (wasm://wasm/z3-built.wasm-08092a9a:wasm-function[34881]:0x1a57643)
+    at z3-built.wasm.memory::reallocate(void*, unsigned long) (wasm://wasm/z3-built.wasm-08092a9a:wasm-function[5854]:0x300688)
+    at z3-built.wasm.vector<unsigned int, false, unsigned int>::expand_vector() (wasm://wasm/z3-built.wasm-08092a9a:wasm-function[966]:0x695ba)
+    at z3-built.wasm.ast_manager::delete_node(ast*) (wasm://wasm/z3-built.wasm-08092a9a:wasm-function[4331]:0x1f924b)
+    at z3-built.wasm.act_cache::dec_refs() (wasm://wasm/z3-built.wasm-08092a9a:wasm-function[5027]:0x27e835)
+
+C:\Users\fatih.kaplan\Desktop\Arge Makale\Makale 10 Sakarya DLP\rulescope-dlp\node_modules\z3-solver\build\z3-built.js:6803
+    if (!(e instanceof EmscriptenEH)) throw e;
+                                      ^
+unwind
+(Use `node --trace-uncaught ...` to show where the exception was thrown)
+
+Node.js v24.14.0

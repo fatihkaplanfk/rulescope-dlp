@@ -1,0 +1,85 @@
+{
+  "size": 50,
+  "seed": 8,
+  "budget": 10000,
+  "execution_order": [
+    "guided",
+    "random"
+  ],
+  "random_seed": 8122,
+  "guided_seed": 112851,
+  "observation_copy_identical": true,
+  "expected_ids": [
+    "action_conflict:CF1:CF2",
+    "coverage_gap:EX_REQ",
+    "coverage_gap:GAP_REQ",
+    "exception_leakage:EX1:0:EX_REQ",
+    "redundancy:SH1",
+    "redundancy:SH2",
+    "shadowing:SH2"
+  ],
+  "random": {
+    "ids": [
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ"
+    ],
+    "evaluated_events": 10000,
+    "elapsed_ms": 311.6164,
+    "coverage": {
+      "rules_matched": 16,
+      "first_match_selected": 17,
+      "rule_pairs_co_matched": 0,
+      "requirement_scopes_reached": 2,
+      "requirement_violations_observed": 2,
+      "exceptions_triggered": 1,
+      "distinct_final_actions": 5,
+      "total_coverage_keys": 43
+    },
+    "tp": 3,
+    "fp": 0,
+    "fn": 4,
+    "precision": 1,
+    "recall": 0.42857142857142855,
+    "f1": 0.6,
+    "false_positive_ids": []
+  },
+  "guided": {
+    "ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "evaluated_events": 10000,
+    "elapsed_ms": 647.9585,
+    "corpus_size": 52,
+    "last_new_coverage_at": 9741,
+    "operations": {
+      "categorical": 8030,
+      "splice": 4518,
+      "size": 5351,
+      "fresh": 981
+    },
+    "coverage": {
+      "rules_matched": 50,
+      "first_match_selected": 50,
+      "rule_pairs_co_matched": 2,
+      "requirement_scopes_reached": 2,
+      "requirement_violations_observed": 2,
+      "exceptions_triggered": 1,
+      "distinct_final_actions": 5,
+      "total_coverage_keys": 112
+    },
+    "tp": 7,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1,
+    "recall": 1,
+    "f1": 1,
+    "false_positive_ids": []
+  }
+}

@@ -1,0 +1,143 @@
+{
+  "created_utc": "2026-10-19T10:52:44.904Z",
+  "environment": {
+    "platform": "Windows_NT 10.0.26200 x64",
+    "cpu": "13th Gen Intel(R) Core(TM) i9-13900H",
+    "logical_cpus": 20,
+    "total_memory_gib": 15.73,
+    "node": "v24.14.0",
+    "z3_solver": "4.16.0"
+  },
+  "git": {
+    "head": "695082647772de23c3e9d492426ac761e44aae0c",
+    "dirty_files": [
+      "M CHANGELOG.md",
+      " M MANIFEST.sha256",
+      " M README.md",
+      " M src/analyzer.js",
+      " M src/baseline.js",
+      " M src/cli.js",
+      " M src/evaluator.js",
+      " M src/report.js",
+      " M src/schema.js",
+      "?? src/ordering.js",
+      "?? test/analyzer-options.test.js",
+      "?? test/differential.test.js",
+      "?? test/formal-semantics.test.js",
+      "?? test/query-status.test.js",
+      "?? validation/"
+    ]
+  },
+  "source_sha256": {
+    "benchmark/generator.js": "d4fbc9ce7b4a433a43ca6da350acd61dfbc4d434fa291d7be087e8d9613afe16",
+    "package-lock.json": "84229ea54e44dede8829168b7f44b21b48a3f011f6fb9346f6902a13ed5e9cf3",
+    "package.json": "959c430b16339c51fedad297cc383d11a9c63ac17fd3cd041c241aba0ae3f2de",
+    "src/analyzer.js": "bc1a89bdc563bc9da5289e4b539318a5ca3267fd39b173c19c9323039505c02a",
+    "src/baseline.js": "80f4f5f1537357adeb8dc807656eb8429be3167d935b38c6c76a486e0bee02ef",
+    "src/cli.js": "24570df8b037822b16a713bca12e1a292953e363f1f956c8dec2a23501e8f980",
+    "src/evaluator.js": "fe6d4bb55cd6a716d0222be0d057eca5e5ea149076d12f5e95aeae5a7955d1ca",
+    "src/index.js": "d155d183bcabc65fa3f56bebb059f918876a0bb91cf39fd4ed3a31aab82ba2f8",
+    "src/ordering.js": "89deee555d1374f49f792e8095b1c2704a8f71f54023d0346d67886fbfd3081a",
+    "src/report.js": "e7e669bf2e21ef6e1ad2d03abbb70452f6a46b699ceed63e0a4cc6b7b94bc882",
+    "src/schema.js": "5ad848340e6d49aad82ce46e4c07b369bcafb6fef7194c3a185698bf0284d0b2",
+    "validation/dense_overlap/generator.mjs": "7ad00e1b2e554379f438e28e5fa9ac1402e533b222827101830e60300d540024",
+    "validation/dense_overlap/params.json": "54e665c4236b2438bb2ccc3c9830aba56e42d31e4641bf5fe6178dc75f3afaab",
+    "validation/dense_overlap/run_pilot.mjs": "a59838de5c5d65acd9ba6d88c4da34de899103a1a9501c975890ebd0fde705a1",
+    "validation/dense_overlap/structure.mjs": "5644891560bd0f06d62f1ea83d8252b9bb9231ac413e41ea0b1fb70493de91e7",
+    "validation/dense_overlap/worker.mjs": "103c417eb8fc5ca57b941694a6e5876a45ccd3ff24b56f2eeb55f33cdd6ca946"
+  },
+  "params": {
+    "frozen_at": "2026-10-19, before any dense-overlap performance run",
+    "note": "Generator parameters are fixed in advance and are not tuned to hit prefilter targets. Measured ratios are reported as they come out.",
+    "semantics": "first_match",
+    "default_action": "Permit",
+    "actions": [
+      "Audit",
+      "Warn",
+      "Encrypt",
+      "Block"
+    ],
+    "requirement_count": 5,
+    "requirement_minimum_action": "Block",
+    "exception_fraction": 0.1,
+    "analysis_types": [
+      "action_conflict",
+      "shadowing",
+      "redundancy",
+      "coverage_gap",
+      "exception_leakage",
+      "semantic_divergence"
+    ],
+    "densities": {
+      "sparse": {
+        "anchors": "n",
+        "wildcard_p": 0.1,
+        "multi_value_p": 0.1,
+        "size_half_width": 64
+      },
+      "medium": {
+        "anchors": "ceil(n/20)",
+        "wildcard_p": 0.3,
+        "multi_value_p": 0.25,
+        "size_half_width": 1024
+      },
+      "dense": {
+        "anchors": "5",
+        "wildcard_p": 0.5,
+        "multi_value_p": 0.35,
+        "size_half_width": 4096
+      }
+    },
+    "pilot": {
+      "sizes": [
+        50,
+        100
+      ],
+      "densities": [
+        "sparse",
+        "medium",
+        "dense"
+      ],
+      "seeds": [
+        1,
+        2
+      ],
+      "query_timeout_ms": 10000,
+      "wall_clock_limit_ms": 600000,
+      "progress_interval_ms": 5000,
+      "run_order_seed": 20261019
+    },
+    "structural_only": {
+      "sizes": [
+        50,
+        100,
+        250,
+        500,
+        1000
+      ],
+      "densities": [
+        "sparse",
+        "medium",
+        "dense"
+      ],
+      "seeds": [
+        1,
+        2
+      ]
+    }
+  },
+  "pilot_run_order": [
+    "n50_medium_s2",
+    "n50_sparse_s1",
+    "n50_medium_s1",
+    "n100_medium_s1",
+    "n100_dense_s2",
+    "n50_sparse_s2",
+    "n50_dense_s1",
+    "n100_sparse_s2",
+    "n50_dense_s2",
+    "n100_sparse_s1",
+    "n100_dense_s1",
+    "n100_medium_s2"
+  ]
+}

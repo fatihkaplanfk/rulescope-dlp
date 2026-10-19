@@ -1,4 +1,5 @@
 import { ACTION_SEVERITY } from "./schema.js";
+import { compareRules } from "./ordering.js";
 
 export function clauseMatches(clause, event) {
   return Object.entries(clause).every(([attribute, constraint]) => {
@@ -22,7 +23,7 @@ export function ruleMatches(rule, event) {
 export function evaluatePolicy(policy, event, semantics = policy.semantics, omitRuleId = null) {
   const matching = policy.rules
     .filter(rule => rule.id !== omitRuleId && ruleMatches(rule, event))
-    .sort((a, b) => a.priority - b.priority || a.id.localeCompare(b.id));
+    .sort(compareRules);
 
   if (matching.length === 0) {
     return { action: policy.default_action, matched_rules: [], applied_rules: [] };

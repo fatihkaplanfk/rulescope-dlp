@@ -29,6 +29,8 @@ async function main() {
     const analyzer = new DlpAnalyzer(api.Context, policy, "policylint_cli");
     const report = await analyzer.analyze({ semantics });
     console.log(format === "json" ? JSON.stringify(report, null, 2) : formatTextReport(report));
+    // Exit code 3 signals an incomplete analysis (at least one UNKNOWN query).
+    if (report.complete === false) process.exitCode = 3;
   } finally {
     api.em.PThread?.terminateAllThreads?.();
   }

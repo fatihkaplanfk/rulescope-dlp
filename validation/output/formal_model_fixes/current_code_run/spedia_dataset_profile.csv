@@ -1,0 +1,7 @@
+Activity,non_anomaly,anomaly,total,included_in_replay
+command,864,9250,10114,False
+device,1793,2613,4406,True
+email,5190,13013,18203,True
+file,6306,6099,12405,True
+http,13363,8360,21723,True
+session,3193,2206,5399,False

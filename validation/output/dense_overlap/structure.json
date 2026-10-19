@@ -1,0 +1,1382 @@
+[
+  {
+    "n": 50,
+    "density": "sparse",
+    "seed": 1,
+    "exceptions_assigned": 5,
+    "exceptions_target": 5,
+    "anchors": 50,
+    "anchor_group_sizes": {
+      "min": 1,
+      "max": 1
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 1225,
+      "P_diff": 921,
+      "C_all": 0,
+      "C_diff": 0,
+      "G_all": 0,
+      "G_diff": 0,
+      "prefilter_candidate_ratio_all": 0,
+      "prefilter_candidate_ratio_diff": 0,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 0,
+      "shadowing_reachability_queries": 0,
+      "shadowing_candidate_sum": 0,
+      "shadowing_candidate_max": 0,
+      "redundancy_difference_queries": 5,
+      "redundancy_candidate_sum": 0,
+      "redundancy_candidate_max": 0,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exception_leakage_queries": 25,
+      "rules_with_exceptions": 5
+    }
+  },
+  {
+    "n": 50,
+    "density": "sparse",
+    "seed": 2,
+    "exceptions_assigned": 5,
+    "exceptions_target": 5,
+    "anchors": 50,
+    "anchor_group_sizes": {
+      "min": 1,
+      "max": 1
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 1225,
+      "P_diff": 923,
+      "C_all": 0,
+      "C_diff": 0,
+      "G_all": 0,
+      "G_diff": 0,
+      "prefilter_candidate_ratio_all": 0,
+      "prefilter_candidate_ratio_diff": 0,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 0,
+      "shadowing_reachability_queries": 0,
+      "shadowing_candidate_sum": 0,
+      "shadowing_candidate_max": 0,
+      "redundancy_difference_queries": 5,
+      "redundancy_candidate_sum": 0,
+      "redundancy_candidate_max": 0,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exception_leakage_queries": 25,
+      "rules_with_exceptions": 5
+    }
+  },
+  {
+    "n": 50,
+    "density": "medium",
+    "seed": 1,
+    "exceptions_assigned": 5,
+    "exceptions_target": 5,
+    "anchors": 3,
+    "anchor_group_sizes": {
+      "min": 16,
+      "max": 17
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 1225,
+      "P_diff": 895,
+      "C_all": 407,
+      "C_diff": 307,
+      "G_all": 392,
+      "G_diff": 294,
+      "prefilter_candidate_ratio_all": 0.33224489795918366,
+      "prefilter_candidate_ratio_diff": 0.34301675977653634,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 307,
+      "shadowing_reachability_queries": 47,
+      "shadowing_candidate_sum": 407,
+      "shadowing_candidate_max": 18,
+      "redundancy_difference_queries": 50,
+      "redundancy_candidate_sum": 814,
+      "redundancy_candidate_max": 21,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        18,
+        17,
+        16,
+        17,
+        17
+      ],
+      "exception_leakage_queries": 25,
+      "rules_with_exceptions": 5
+    }
+  },
+  {
+    "n": 50,
+    "density": "medium",
+    "seed": 2,
+    "exceptions_assigned": 5,
+    "exceptions_target": 5,
+    "anchors": 3,
+    "anchor_group_sizes": {
+      "min": 16,
+      "max": 17
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 1225,
+      "P_diff": 837,
+      "C_all": 418,
+      "C_diff": 279,
+      "G_all": 392,
+      "G_diff": 266,
+      "prefilter_candidate_ratio_all": 0.34122448979591835,
+      "prefilter_candidate_ratio_diff": 0.3333333333333333,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 279,
+      "shadowing_reachability_queries": 47,
+      "shadowing_candidate_sum": 418,
+      "shadowing_candidate_max": 20,
+      "redundancy_difference_queries": 50,
+      "redundancy_candidate_sum": 836,
+      "redundancy_candidate_max": 22,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        17,
+        19,
+        18,
+        17,
+        17
+      ],
+      "exception_leakage_queries": 25,
+      "rules_with_exceptions": 5
+    }
+  },
+  {
+    "n": 50,
+    "density": "dense",
+    "seed": 1,
+    "exceptions_assigned": 5,
+    "exceptions_target": 5,
+    "anchors": 5,
+    "anchor_group_sizes": {
+      "min": 10,
+      "max": 10
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 1225,
+      "P_diff": 924,
+      "C_all": 679,
+      "C_diff": 513,
+      "G_all": 225,
+      "G_diff": 172,
+      "prefilter_candidate_ratio_all": 0.5542857142857143,
+      "prefilter_candidate_ratio_diff": 0.5551948051948052,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 513,
+      "shadowing_reachability_queries": 48,
+      "shadowing_candidate_sum": 679,
+      "shadowing_candidate_max": 36,
+      "redundancy_difference_queries": 50,
+      "redundancy_candidate_sum": 1358,
+      "redundancy_candidate_max": 45,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        26,
+        41,
+        19,
+        30,
+        21
+      ],
+      "exception_leakage_queries": 25,
+      "rules_with_exceptions": 5
+    }
+  },
+  {
+    "n": 50,
+    "density": "dense",
+    "seed": 2,
+    "exceptions_assigned": 5,
+    "exceptions_target": 5,
+    "anchors": 5,
+    "anchor_group_sizes": {
+      "min": 10,
+      "max": 10
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 1225,
+      "P_diff": 927,
+      "C_all": 625,
+      "C_diff": 469,
+      "G_all": 225,
+      "G_diff": 174,
+      "prefilter_candidate_ratio_all": 0.5102040816326531,
+      "prefilter_candidate_ratio_diff": 0.505933117583603,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 469,
+      "shadowing_reachability_queries": 49,
+      "shadowing_candidate_sum": 625,
+      "shadowing_candidate_max": 36,
+      "redundancy_difference_queries": 50,
+      "redundancy_candidate_sum": 1250,
+      "redundancy_candidate_max": 44,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        31,
+        16,
+        31,
+        28,
+        28
+      ],
+      "exception_leakage_queries": 25,
+      "rules_with_exceptions": 5
+    }
+  },
+  {
+    "n": 100,
+    "density": "sparse",
+    "seed": 1,
+    "exceptions_assigned": 10,
+    "exceptions_target": 10,
+    "anchors": 100,
+    "anchor_group_sizes": {
+      "min": 1,
+      "max": 1
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 4950,
+      "P_diff": 3740,
+      "C_all": 0,
+      "C_diff": 0,
+      "G_all": 0,
+      "G_diff": 0,
+      "prefilter_candidate_ratio_all": 0,
+      "prefilter_candidate_ratio_diff": 0,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 0,
+      "shadowing_reachability_queries": 0,
+      "shadowing_candidate_sum": 0,
+      "shadowing_candidate_max": 0,
+      "redundancy_difference_queries": 10,
+      "redundancy_candidate_sum": 0,
+      "redundancy_candidate_max": 0,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exception_leakage_queries": 50,
+      "rules_with_exceptions": 10
+    }
+  },
+  {
+    "n": 100,
+    "density": "sparse",
+    "seed": 2,
+    "exceptions_assigned": 10,
+    "exceptions_target": 10,
+    "anchors": 100,
+    "anchor_group_sizes": {
+      "min": 1,
+      "max": 1
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 4950,
+      "P_diff": 3674,
+      "C_all": 0,
+      "C_diff": 0,
+      "G_all": 0,
+      "G_diff": 0,
+      "prefilter_candidate_ratio_all": 0,
+      "prefilter_candidate_ratio_diff": 0,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 0,
+      "shadowing_reachability_queries": 0,
+      "shadowing_candidate_sum": 0,
+      "shadowing_candidate_max": 0,
+      "redundancy_difference_queries": 10,
+      "redundancy_candidate_sum": 0,
+      "redundancy_candidate_max": 0,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exception_leakage_queries": 50,
+      "rules_with_exceptions": 10
+    }
+  },
+  {
+    "n": 100,
+    "density": "medium",
+    "seed": 1,
+    "exceptions_assigned": 10,
+    "exceptions_target": 10,
+    "anchors": 5,
+    "anchor_group_sizes": {
+      "min": 20,
+      "max": 20
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 4950,
+      "P_diff": 3735,
+      "C_all": 1055,
+      "C_diff": 807,
+      "G_all": 950,
+      "G_diff": 721,
+      "prefilter_candidate_ratio_all": 0.21313131313131314,
+      "prefilter_candidate_ratio_diff": 0.21606425702811244,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 807,
+      "shadowing_reachability_queries": 96,
+      "shadowing_candidate_sum": 1055,
+      "shadowing_candidate_max": 32,
+      "redundancy_difference_queries": 100,
+      "redundancy_candidate_sum": 2110,
+      "redundancy_candidate_max": 39,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        20,
+        23,
+        20,
+        36,
+        20
+      ],
+      "exception_leakage_queries": 50,
+      "rules_with_exceptions": 10
+    }
+  },
+  {
+    "n": 100,
+    "density": "medium",
+    "seed": 2,
+    "exceptions_assigned": 10,
+    "exceptions_target": 10,
+    "anchors": 5,
+    "anchor_group_sizes": {
+      "min": 20,
+      "max": 20
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 4950,
+      "P_diff": 3737,
+      "C_all": 1019,
+      "C_diff": 751,
+      "G_all": 950,
+      "G_diff": 701,
+      "prefilter_candidate_ratio_all": 0.20585858585858585,
+      "prefilter_candidate_ratio_diff": 0.20096333957720097,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 751,
+      "shadowing_reachability_queries": 95,
+      "shadowing_candidate_sum": 1019,
+      "shadowing_candidate_max": 26,
+      "redundancy_difference_queries": 100,
+      "redundancy_candidate_sum": 2038,
+      "redundancy_candidate_max": 31,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        20,
+        24,
+        21,
+        20,
+        20
+      ],
+      "exception_leakage_queries": 50,
+      "rules_with_exceptions": 10
+    }
+  },
+  {
+    "n": 100,
+    "density": "dense",
+    "seed": 1,
+    "exceptions_assigned": 10,
+    "exceptions_target": 10,
+    "anchors": 5,
+    "anchor_group_sizes": {
+      "min": 20,
+      "max": 20
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 4950,
+      "P_diff": 3744,
+      "C_all": 2092,
+      "C_diff": 1573,
+      "G_all": 950,
+      "G_diff": 680,
+      "prefilter_candidate_ratio_all": 0.4226262626262626,
+      "prefilter_candidate_ratio_diff": 0.4201388888888889,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 1573,
+      "shadowing_reachability_queries": 98,
+      "shadowing_candidate_sum": 2092,
+      "shadowing_candidate_max": 65,
+      "redundancy_difference_queries": 100,
+      "redundancy_candidate_sum": 4184,
+      "redundancy_candidate_max": 76,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        35,
+        36,
+        40,
+        41,
+        45
+      ],
+      "exception_leakage_queries": 50,
+      "rules_with_exceptions": 10
+    }
+  },
+  {
+    "n": 100,
+    "density": "dense",
+    "seed": 2,
+    "exceptions_assigned": 10,
+    "exceptions_target": 10,
+    "anchors": 5,
+    "anchor_group_sizes": {
+      "min": 20,
+      "max": 20
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 4950,
+      "P_diff": 3731,
+      "C_all": 1948,
+      "C_diff": 1461,
+      "G_all": 950,
+      "G_diff": 727,
+      "prefilter_candidate_ratio_all": 0.3935353535353535,
+      "prefilter_candidate_ratio_diff": 0.3915840257303672,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 1461,
+      "shadowing_reachability_queries": 98,
+      "shadowing_candidate_sum": 1948,
+      "shadowing_candidate_max": 54,
+      "redundancy_difference_queries": 100,
+      "redundancy_candidate_sum": 3896,
+      "redundancy_candidate_max": 68,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        23,
+        53,
+        37,
+        59,
+        40
+      ],
+      "exception_leakage_queries": 50,
+      "rules_with_exceptions": 10
+    }
+  },
+  {
+    "n": 250,
+    "density": "sparse",
+    "seed": 1,
+    "exceptions_assigned": 25,
+    "exceptions_target": 25,
+    "anchors": 250,
+    "anchor_group_sizes": {
+      "min": 1,
+      "max": 1
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 31125,
+      "P_diff": 23379,
+      "C_all": 1,
+      "C_diff": 1,
+      "G_all": 0,
+      "G_diff": 0,
+      "prefilter_candidate_ratio_all": 0.0000321285140562249,
+      "prefilter_candidate_ratio_diff": 0.00004277342914581462,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 1,
+      "shadowing_reachability_queries": 1,
+      "shadowing_candidate_sum": 1,
+      "shadowing_candidate_max": 1,
+      "redundancy_difference_queries": 27,
+      "redundancy_candidate_sum": 2,
+      "redundancy_candidate_max": 1,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exception_leakage_queries": 125,
+      "rules_with_exceptions": 25
+    }
+  },
+  {
+    "n": 250,
+    "density": "sparse",
+    "seed": 2,
+    "exceptions_assigned": 25,
+    "exceptions_target": 25,
+    "anchors": 250,
+    "anchor_group_sizes": {
+      "min": 1,
+      "max": 1
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 31125,
+      "P_diff": 23363,
+      "C_all": 1,
+      "C_diff": 1,
+      "G_all": 0,
+      "G_diff": 0,
+      "prefilter_candidate_ratio_all": 0.0000321285140562249,
+      "prefilter_candidate_ratio_diff": 0.0000428027222531353,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 1,
+      "shadowing_reachability_queries": 1,
+      "shadowing_candidate_sum": 1,
+      "shadowing_candidate_max": 1,
+      "redundancy_difference_queries": 27,
+      "redundancy_candidate_sum": 2,
+      "redundancy_candidate_max": 1,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exception_leakage_queries": 125,
+      "rules_with_exceptions": 25
+    }
+  },
+  {
+    "n": 250,
+    "density": "medium",
+    "seed": 1,
+    "exceptions_assigned": 25,
+    "exceptions_target": 25,
+    "anchors": 13,
+    "anchor_group_sizes": {
+      "min": 19,
+      "max": 20
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 31125,
+      "P_diff": 23415,
+      "C_all": 3326,
+      "C_diff": 2484,
+      "G_all": 2280,
+      "G_diff": 1692,
+      "prefilter_candidate_ratio_all": 0.10685943775100401,
+      "prefilter_candidate_ratio_diff": 0.10608584240871237,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 2484,
+      "shadowing_reachability_queries": 241,
+      "shadowing_candidate_sum": 3326,
+      "shadowing_candidate_max": 50,
+      "redundancy_difference_queries": 250,
+      "redundancy_candidate_sum": 6652,
+      "redundancy_candidate_max": 82,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        47,
+        28,
+        35,
+        37,
+        19
+      ],
+      "exception_leakage_queries": 125,
+      "rules_with_exceptions": 25
+    }
+  },
+  {
+    "n": 250,
+    "density": "medium",
+    "seed": 2,
+    "exceptions_assigned": 25,
+    "exceptions_target": 25,
+    "anchors": 13,
+    "anchor_group_sizes": {
+      "min": 19,
+      "max": 20
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 31125,
+      "P_diff": 23411,
+      "C_all": 3323,
+      "C_diff": 2515,
+      "G_all": 2280,
+      "G_diff": 1733,
+      "prefilter_candidate_ratio_all": 0.10676305220883534,
+      "prefilter_candidate_ratio_diff": 0.10742813207466576,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 2515,
+      "shadowing_reachability_queries": 241,
+      "shadowing_candidate_sum": 3323,
+      "shadowing_candidate_max": 51,
+      "redundancy_difference_queries": 250,
+      "redundancy_candidate_sum": 6646,
+      "redundancy_candidate_max": 109,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        35,
+        24,
+        22,
+        53,
+        22
+      ],
+      "exception_leakage_queries": 125,
+      "rules_with_exceptions": 25
+    }
+  },
+  {
+    "n": 250,
+    "density": "dense",
+    "seed": 1,
+    "exceptions_assigned": 25,
+    "exceptions_target": 25,
+    "anchors": 5,
+    "anchor_group_sizes": {
+      "min": 50,
+      "max": 50
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 31125,
+      "P_diff": 23307,
+      "C_all": 14369,
+      "C_diff": 10791,
+      "G_all": 6125,
+      "G_diff": 4614,
+      "prefilter_candidate_ratio_all": 0.4616546184738956,
+      "prefilter_candidate_ratio_diff": 0.4629939503153559,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 10791,
+      "shadowing_reachability_queries": 247,
+      "shadowing_candidate_sum": 14369,
+      "shadowing_candidate_max": 199,
+      "redundancy_difference_queries": 250,
+      "redundancy_candidate_sum": 28738,
+      "redundancy_candidate_max": 205,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        114,
+        135,
+        50,
+        106,
+        100
+      ],
+      "exception_leakage_queries": 125,
+      "rules_with_exceptions": 25
+    }
+  },
+  {
+    "n": 250,
+    "density": "dense",
+    "seed": 2,
+    "exceptions_assigned": 25,
+    "exceptions_target": 25,
+    "anchors": 5,
+    "anchor_group_sizes": {
+      "min": 50,
+      "max": 50
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 31125,
+      "P_diff": 23232,
+      "C_all": 13452,
+      "C_diff": 10061,
+      "G_all": 6125,
+      "G_diff": 4577,
+      "prefilter_candidate_ratio_all": 0.43219277108433735,
+      "prefilter_candidate_ratio_diff": 0.4330664600550964,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 10061,
+      "shadowing_reachability_queries": 248,
+      "shadowing_candidate_sum": 13452,
+      "shadowing_candidate_max": 161,
+      "redundancy_difference_queries": 250,
+      "redundancy_candidate_sum": 26904,
+      "redundancy_candidate_max": 217,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        89,
+        112,
+        89,
+        93,
+        112
+      ],
+      "exception_leakage_queries": 125,
+      "rules_with_exceptions": 25
+    }
+  },
+  {
+    "n": 500,
+    "density": "sparse",
+    "seed": 1,
+    "exceptions_assigned": 50,
+    "exceptions_target": 50,
+    "anchors": 500,
+    "anchor_group_sizes": {
+      "min": 1,
+      "max": 1
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 124750,
+      "P_diff": 93495,
+      "C_all": 5,
+      "C_diff": 4,
+      "G_all": 0,
+      "G_diff": 0,
+      "prefilter_candidate_ratio_all": 0.00004008016032064128,
+      "prefilter_candidate_ratio_diff": 0.000042783036526017434,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 4,
+      "shadowing_reachability_queries": 5,
+      "shadowing_candidate_sum": 5,
+      "shadowing_candidate_max": 1,
+      "redundancy_difference_queries": 59,
+      "redundancy_candidate_sum": 10,
+      "redundancy_candidate_max": 1,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exception_leakage_queries": 250,
+      "rules_with_exceptions": 50
+    }
+  },
+  {
+    "n": 500,
+    "density": "sparse",
+    "seed": 2,
+    "exceptions_assigned": 50,
+    "exceptions_target": 50,
+    "anchors": 500,
+    "anchor_group_sizes": {
+      "min": 1,
+      "max": 1
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 124750,
+      "P_diff": 93681,
+      "C_all": 10,
+      "C_diff": 7,
+      "G_all": 0,
+      "G_diff": 0,
+      "prefilter_candidate_ratio_all": 0.00008016032064128256,
+      "prefilter_candidate_ratio_diff": 0.00007472166180975865,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 7,
+      "shadowing_reachability_queries": 10,
+      "shadowing_candidate_sum": 10,
+      "shadowing_candidate_max": 1,
+      "redundancy_difference_queries": 70,
+      "redundancy_candidate_sum": 20,
+      "redundancy_candidate_max": 1,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exception_leakage_queries": 250,
+      "rules_with_exceptions": 50
+    }
+  },
+  {
+    "n": 500,
+    "density": "medium",
+    "seed": 1,
+    "exceptions_assigned": 50,
+    "exceptions_target": 50,
+    "anchors": 25,
+    "anchor_group_sizes": {
+      "min": 20,
+      "max": 20
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 124750,
+      "P_diff": 93663,
+      "C_all": 7481,
+      "C_diff": 5645,
+      "G_all": 4750,
+      "G_diff": 3554,
+      "prefilter_candidate_ratio_all": 0.05996793587174349,
+      "prefilter_candidate_ratio_diff": 0.060269263209591833,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 5645,
+      "shadowing_reachability_queries": 484,
+      "shadowing_candidate_sum": 7481,
+      "shadowing_candidate_max": 73,
+      "redundancy_difference_queries": 500,
+      "redundancy_candidate_sum": 14962,
+      "redundancy_candidate_max": 80,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        44,
+        25,
+        25,
+        21,
+        20
+      ],
+      "exception_leakage_queries": 250,
+      "rules_with_exceptions": 50
+    }
+  },
+  {
+    "n": 500,
+    "density": "medium",
+    "seed": 2,
+    "exceptions_assigned": 50,
+    "exceptions_target": 50,
+    "anchors": 25,
+    "anchor_group_sizes": {
+      "min": 20,
+      "max": 20
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 124750,
+      "P_diff": 93741,
+      "C_all": 7834,
+      "C_diff": 5900,
+      "G_all": 4750,
+      "G_diff": 3583,
+      "prefilter_candidate_ratio_all": 0.06279759519038076,
+      "prefilter_candidate_ratio_diff": 0.06293937551338262,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 5900,
+      "shadowing_reachability_queries": 482,
+      "shadowing_candidate_sum": 7834,
+      "shadowing_candidate_max": 127,
+      "redundancy_difference_queries": 500,
+      "redundancy_candidate_sum": 15668,
+      "redundancy_candidate_max": 127,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        36,
+        20,
+        23,
+        23,
+        24
+      ],
+      "exception_leakage_queries": 250,
+      "rules_with_exceptions": 50
+    }
+  },
+  {
+    "n": 500,
+    "density": "dense",
+    "seed": 1,
+    "exceptions_assigned": 50,
+    "exceptions_target": 50,
+    "anchors": 5,
+    "anchor_group_sizes": {
+      "min": 100,
+      "max": 100
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 124750,
+      "P_diff": 93479,
+      "C_all": 61135,
+      "C_diff": 45703,
+      "G_all": 24750,
+      "G_diff": 18577,
+      "prefilter_candidate_ratio_all": 0.49006012024048096,
+      "prefilter_candidate_ratio_diff": 0.4889119481380845,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 45703,
+      "shadowing_reachability_queries": 497,
+      "shadowing_candidate_sum": 61135,
+      "shadowing_candidate_max": 369,
+      "redundancy_difference_queries": 500,
+      "redundancy_candidate_sum": 122270,
+      "redundancy_candidate_max": 445,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        249,
+        315,
+        255,
+        134,
+        159
+      ],
+      "exception_leakage_queries": 250,
+      "rules_with_exceptions": 50
+    }
+  },
+  {
+    "n": 500,
+    "density": "dense",
+    "seed": 2,
+    "exceptions_assigned": 50,
+    "exceptions_target": 50,
+    "anchors": 5,
+    "anchor_group_sizes": {
+      "min": 100,
+      "max": 100
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 124750,
+      "P_diff": 93185,
+      "C_all": 59520,
+      "C_diff": 44407,
+      "G_all": 24750,
+      "G_diff": 18510,
+      "prefilter_candidate_ratio_all": 0.4771142284569138,
+      "prefilter_candidate_ratio_diff": 0.47654665450448036,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 44407,
+      "shadowing_reachability_queries": 498,
+      "shadowing_candidate_sum": 59520,
+      "shadowing_candidate_max": 426,
+      "redundancy_difference_queries": 500,
+      "redundancy_candidate_sum": 119040,
+      "redundancy_candidate_max": 447,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        139,
+        326,
+        166,
+        230,
+        172
+      ],
+      "exception_leakage_queries": 250,
+      "rules_with_exceptions": 50
+    }
+  },
+  {
+    "n": 1000,
+    "density": "sparse",
+    "seed": 1,
+    "exceptions_assigned": 100,
+    "exceptions_target": 100,
+    "anchors": 1000,
+    "anchor_group_sizes": {
+      "min": 1,
+      "max": 1
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 499500,
+      "P_diff": 374773,
+      "C_all": 12,
+      "C_diff": 11,
+      "G_all": 0,
+      "G_diff": 0,
+      "prefilter_candidate_ratio_all": 0.000024024024024024024,
+      "prefilter_candidate_ratio_diff": 0.00002935110053285589,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 11,
+      "shadowing_reachability_queries": 12,
+      "shadowing_candidate_sum": 12,
+      "shadowing_candidate_max": 1,
+      "redundancy_difference_queries": 120,
+      "redundancy_candidate_sum": 24,
+      "redundancy_candidate_max": 1,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exception_leakage_queries": 500,
+      "rules_with_exceptions": 100
+    }
+  },
+  {
+    "n": 1000,
+    "density": "sparse",
+    "seed": 2,
+    "exceptions_assigned": 100,
+    "exceptions_target": 100,
+    "anchors": 1000,
+    "anchor_group_sizes": {
+      "min": 1,
+      "max": 1
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 499500,
+      "P_diff": 374827,
+      "C_all": 20,
+      "C_diff": 15,
+      "G_all": 0,
+      "G_diff": 0,
+      "prefilter_candidate_ratio_all": 0.00004004004004004004,
+      "prefilter_candidate_ratio_diff": 0.00004001846185040032,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 15,
+      "shadowing_reachability_queries": 18,
+      "shadowing_candidate_sum": 20,
+      "shadowing_candidate_max": 2,
+      "redundancy_difference_queries": 132,
+      "redundancy_candidate_sum": 40,
+      "redundancy_candidate_max": 2,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exception_leakage_queries": 500,
+      "rules_with_exceptions": 100
+    }
+  },
+  {
+    "n": 1000,
+    "density": "medium",
+    "seed": 1,
+    "exceptions_assigned": 100,
+    "exceptions_target": 100,
+    "anchors": 50,
+    "anchor_group_sizes": {
+      "min": 20,
+      "max": 20
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 499500,
+      "P_diff": 374283,
+      "C_all": 19774,
+      "C_diff": 14860,
+      "G_all": 9500,
+      "G_diff": 7129,
+      "prefilter_candidate_ratio_all": 0.03958758758758759,
+      "prefilter_candidate_ratio_diff": 0.03970257799579462,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 14860,
+      "shadowing_reachability_queries": 973,
+      "shadowing_candidate_sum": 19774,
+      "shadowing_candidate_max": 117,
+      "redundancy_difference_queries": 1000,
+      "redundancy_candidate_sum": 39548,
+      "redundancy_candidate_max": 189,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        26,
+        39,
+        31,
+        90,
+        27
+      ],
+      "exception_leakage_queries": 500,
+      "rules_with_exceptions": 100
+    }
+  },
+  {
+    "n": 1000,
+    "density": "medium",
+    "seed": 2,
+    "exceptions_assigned": 100,
+    "exceptions_target": 100,
+    "anchors": 50,
+    "anchor_group_sizes": {
+      "min": 20,
+      "max": 20
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 499500,
+      "P_diff": 374508,
+      "C_all": 18988,
+      "C_diff": 14315,
+      "G_all": 9500,
+      "G_diff": 7136,
+      "prefilter_candidate_ratio_all": 0.03801401401401401,
+      "prefilter_candidate_ratio_diff": 0.038223482542429,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 14315,
+      "shadowing_reachability_queries": 967,
+      "shadowing_candidate_sum": 18988,
+      "shadowing_candidate_max": 130,
+      "redundancy_difference_queries": 1000,
+      "redundancy_candidate_sum": 37976,
+      "redundancy_candidate_max": 157,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        40,
+        20,
+        57,
+        65,
+        41
+      ],
+      "exception_leakage_queries": 500,
+      "rules_with_exceptions": 100
+    }
+  },
+  {
+    "n": 1000,
+    "density": "dense",
+    "seed": 1,
+    "exceptions_assigned": 100,
+    "exceptions_target": 100,
+    "anchors": 5,
+    "anchor_group_sizes": {
+      "min": 200,
+      "max": 200
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 499500,
+      "P_diff": 374933,
+      "C_all": 292702,
+      "C_diff": 219778,
+      "G_all": 99500,
+      "G_diff": 74831,
+      "prefilter_candidate_ratio_all": 0.58598998998999,
+      "prefilter_candidate_ratio_diff": 0.5861793973856663,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 219778,
+      "shadowing_reachability_queries": 998,
+      "shadowing_candidate_sum": 292702,
+      "shadowing_candidate_max": 949,
+      "redundancy_difference_queries": 1000,
+      "redundancy_candidate_sum": 585404,
+      "redundancy_candidate_max": 999,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        608,
+        578,
+        391,
+        689,
+        711
+      ],
+      "exception_leakage_queries": 500,
+      "rules_with_exceptions": 100
+    }
+  },
+  {
+    "n": 1000,
+    "density": "dense",
+    "seed": 2,
+    "exceptions_assigned": 100,
+    "exceptions_target": 100,
+    "anchors": 5,
+    "anchor_group_sizes": {
+      "min": 200,
+      "max": 200
+    },
+    "anchor_check": {
+      "rules_not_matching_anchor": [],
+      "requirements_not_containing_anchor": []
+    },
+    "pairs": {
+      "P_all": 499500,
+      "P_diff": 374237,
+      "C_all": 183623,
+      "C_diff": 137451,
+      "G_all": 99500,
+      "G_diff": 74473,
+      "prefilter_candidate_ratio_all": 0.3676136136136136,
+      "prefilter_candidate_ratio_diff": 0.36728329908587337,
+      "shared_anchor_pairs_failing_prefilter": 0
+    },
+    "candidates": {
+      "action_conflict_queries": 137451,
+      "shadowing_reachability_queries": 996,
+      "shadowing_candidate_sum": 183623,
+      "shadowing_candidate_max": 630,
+      "redundancy_difference_queries": 1000,
+      "redundancy_candidate_sum": 367246,
+      "redundancy_candidate_max": 687,
+      "coverage_gap_queries": 5,
+      "coverage_gap_relevant_rules": [
+        591,
+        441,
+        449,
+        339,
+        383
+      ],
+      "exception_leakage_queries": 500,
+      "rules_with_exceptions": 100
+    }
+  }
+]

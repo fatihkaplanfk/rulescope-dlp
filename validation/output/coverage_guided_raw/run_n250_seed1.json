@@ -1,0 +1,88 @@
+{
+  "size": 250,
+  "seed": 1,
+  "budget": 10000,
+  "execution_order": [
+    "random",
+    "guided"
+  ],
+  "random_seed": 1259,
+  "guided_seed": 105988,
+  "observation_copy_identical": true,
+  "expected_ids": [
+    "action_conflict:CF1:CF2",
+    "coverage_gap:EX_REQ",
+    "coverage_gap:GAP_REQ",
+    "exception_leakage:EX1:0:EX_REQ",
+    "redundancy:SH1",
+    "redundancy:SH2",
+    "shadowing:SH2"
+  ],
+  "random": {
+    "ids": [
+      "action_conflict:CF1:CF2",
+      "redundancy:CF2",
+      "shadowing:CF2"
+    ],
+    "evaluated_events": 10000,
+    "elapsed_ms": 1513.2283,
+    "coverage": {
+      "rules_matched": 86,
+      "first_match_selected": 86,
+      "rule_pairs_co_matched": 1,
+      "requirement_scopes_reached": 0,
+      "requirement_violations_observed": 0,
+      "exceptions_triggered": 0,
+      "distinct_final_actions": 5,
+      "total_coverage_keys": 178
+    },
+    "tp": 1,
+    "fp": 2,
+    "fn": 6,
+    "precision": 0.3333333333333333,
+    "recall": 0.14285714285714285,
+    "f1": 0.2,
+    "false_positive_ids": [
+      "redundancy:CF2",
+      "shadowing:CF2"
+    ]
+  },
+  "guided": {
+    "ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "evaluated_events": 10000,
+    "elapsed_ms": 3137.8112,
+    "corpus_size": 238,
+    "last_new_coverage_at": 9838,
+    "operations": {
+      "categorical": 7984,
+      "splice": 4520,
+      "size": 5273,
+      "fresh": 1001
+    },
+    "coverage": {
+      "rules_matched": 236,
+      "first_match_selected": 236,
+      "rule_pairs_co_matched": 2,
+      "requirement_scopes_reached": 2,
+      "requirement_violations_observed": 2,
+      "exceptions_triggered": 1,
+      "distinct_final_actions": 5,
+      "total_coverage_keys": 484
+    },
+    "tp": 7,
+    "fp": 0,
+    "fn": 0,
+    "precision": 1,
+    "recall": 1,
+    "f1": 1,
+    "false_positive_ids": []
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "frozen_at": "2026-10-19, before any dense-overlap performance run",
+  "note": "Generator parameters are fixed in advance and are not tuned to hit prefilter targets. Measured ratios are reported as they come out.",
+  "semantics": "first_match",
+  "default_action": "Permit",
+  "actions": ["Audit", "Warn", "Encrypt", "Block"],
+  "requirement_count": 5,
+  "requirement_minimum_action": "Block",
+  "exception_fraction": 0.10,
+  "analysis_types": ["action_conflict", "shadowing", "redundancy", "coverage_gap", "exception_leakage", "semantic_divergence"],
+  "densities": {
+    "sparse": { "anchors": "n", "wildcard_p": 0.10, "multi_value_p": 0.10, "size_half_width": 64 },
+    "medium": { "anchors": "ceil(n/20)", "wildcard_p": 0.30, "multi_value_p": 0.25, "size_half_width": 1024 },
+    "dense": { "anchors": "5", "wildcard_p": 0.50, "multi_value_p": 0.35, "size_half_width": 4096 }
+  },
+  "pilot": {
+    "sizes": [50, 100],
+    "densities": ["sparse", "medium", "dense"],
+    "seeds": [1, 2],
+    "query_timeout_ms": 10000,
+    "wall_clock_limit_ms": 600000,
+    "progress_interval_ms": 5000,
+    "run_order_seed": 20261019
+  },
+  "structural_only": {
+    "sizes": [50, 100, 250, 500, 1000],
+    "densities": ["sparse", "medium", "dense"],
+    "seeds": [1, 2]
+  }
+}

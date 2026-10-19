@@ -1,4 +1,5 @@
 import { ACTION_SEVERITY } from "./schema.js";
+import { canonicalRuleIds, compareRules } from "./ordering.js";
 import { clauseMatches, evaluatePolicy, ruleMatches } from "./evaluator.js";
 import { findingId } from "./analyzer.js";
 
@@ -9,7 +10,7 @@ export function analyzeByRandomTesting(policy, options = {}) {
   const findings = [];
   const ordered = policy.rules
     .filter(rule => rule.enabled)
-    .sort((a, b) => a.priority - b.priority || a.id.localeCompare(b.id));
+    .sort(compareRules);
 
   const observations = new Map(ordered.map(rule => [rule.id, { matched: 0, applied: 0, changed: 0 }]));
   const conflicts = new Set();
@@ -23,7 +24,7 @@ export function analyzeByRandomTesting(policy, options = {}) {
     for (let left = 0; left < matching.length; left += 1) {
       for (let right = left + 1; right < matching.length; right += 1) {
         if (matching[left].action !== matching[right].action) {
-          const ids = [matching[left].id, matching[right].id].sort();
+          const ids = canonicalRuleIds(matching[left].id, matching[right].id);
           conflicts.add(findingId("action_conflict", ...ids));
         }
       }

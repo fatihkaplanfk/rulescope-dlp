@@ -1,0 +1,505 @@
+{
+  "dataset": {
+    "source_rows": 72250,
+    "normalized_rows": 56737,
+    "anomaly_rows": 30085,
+    "non_anomaly_rows": 26652,
+    "time_start": "2025-03-06 11:46:28.000",
+    "time_end": "2025-03-30 19:45:22.120",
+    "distinct_days": 25,
+    "decision_features_excluded": [
+      "Anomaly",
+      "Agent_name",
+      "User"
+    ]
+  },
+  "variants": [
+    {
+      "variant": "clean",
+      "mutations": [],
+      "counts": {
+        "action_conflict": 0,
+        "shadowing": 0,
+        "redundancy": 0,
+        "coverage_gap": 0,
+        "exception_leakage": 0,
+        "semantic_divergence": 0
+      },
+      "finding_count": 0,
+      "elapsed_ms": 204.3843,
+      "findings": []
+    },
+    {
+      "variant": "shadow_email",
+      "mutations": [
+        "shadow_email"
+      ],
+      "counts": {
+        "action_conflict": 1,
+        "shadowing": 1,
+        "redundancy": 1,
+        "coverage_gap": 1,
+        "exception_leakage": 0,
+        "semantic_divergence": 1
+      },
+      "finding_count": 5,
+      "elapsed_ms": 171.295,
+      "findings": [
+        {
+          "id": "action_conflict:M_EMAIL_EARLY_PERMIT:R_EMAIL_EXTERNAL_ATTACHMENT",
+          "type": "action_conflict",
+          "rules": [
+            "M_EMAIL_EARLY_PERMIT",
+            "R_EMAIL_EXTERNAL_ATTACHMENT"
+          ],
+          "actions": [
+            "Permit",
+            "Block"
+          ],
+          "evidence_kind": "witness",
+          "witness": {
+            "user_group": "General",
+            "data_classification": "Restricted",
+            "content_type": "Attachment",
+            "channel": "Email",
+            "destination_trust": "Untrusted",
+            "device_trust": "Managed",
+            "file_type": "PDF",
+            "size_mb": 0
+          },
+          "explanation": "M_EMAIL_EARLY_PERMIT and R_EMAIL_EXTERNAL_ATTACHMENT match the same transfer but prescribe Permit and Block."
+        },
+        {
+          "id": "shadowing:R_EMAIL_EXTERNAL_ATTACHMENT",
+          "type": "shadowing",
+          "rule": "R_EMAIL_EXTERNAL_ATTACHMENT",
+          "covering_rule_set": [
+            "M_EMAIL_EARLY_PERMIT"
+          ],
+          "representative_event_matching_rules": [
+            "M_EMAIL_EARLY_PERMIT"
+          ],
+          "evidence_kind": "representative_event",
+          "witness": {
+            "user_group": "General",
+            "data_classification": "Restricted",
+            "content_type": "Attachment",
+            "channel": "Email",
+            "destination_trust": "Untrusted",
+            "device_trust": "Managed",
+            "file_type": "PDF",
+            "size_mb": 0
+          },
+          "explanation": "R_EMAIL_EXTERNAL_ATTACHMENT is unreachable under first-match evaluation: every event it matches is also matched by at least one earlier rule in {M_EMAIL_EARLY_PERMIT} (UNSAT). The representative event is matched by M_EMAIL_EARLY_PERMIT."
+        },
+        {
+          "id": "redundancy:R_EMAIL_EXTERNAL_ATTACHMENT",
+          "type": "redundancy",
+          "rule": "R_EMAIL_EXTERNAL_ATTACHMENT",
+          "evidence_kind": "representative_event",
+          "witness": {
+            "user_group": "General",
+            "data_classification": "Restricted",
+            "content_type": "Attachment",
+            "channel": "Email",
+            "destination_trust": "Untrusted",
+            "device_trust": "Managed",
+            "file_type": "PDF",
+            "size_mb": 0
+          },
+          "explanation": "Removing R_EMAIL_EXTERNAL_ATTACHMENT does not change the policy decision for any valid transfer under first_match semantics."
+        },
+        {
+          "id": "coverage_gap:REQ_EMAIL_EXTERNAL_ATTACHMENT",
+          "type": "coverage_gap",
+          "requirement": "REQ_EMAIL_EXTERNAL_ATTACHMENT",
+          "minimum_action": "Block",
+          "effective_action": "Permit",
+          "evidence_kind": "counterexample",
+          "witness": {
+            "user_group": "General",
+            "data_classification": "Restricted",
+            "content_type": "Attachment",
+            "channel": "Email",
+            "destination_trust": "Untrusted",
+            "device_trust": "Managed",
+            "file_type": "PDF",
+            "size_mb": 0
+          },
+          "explanation": "REQ_EMAIL_EXTERNAL_ATTACHMENT requires at least Block, but the counterexample is evaluated as Permit."
+        },
+        {
+          "id": "semantic_divergence",
+          "type": "semantic_divergence",
+          "matched_rules": [
+            "R_EMAIL_EXTERNAL_ATTACHMENT",
+            "M_EMAIL_EARLY_PERMIT"
+          ],
+          "first_match_action": "Permit",
+          "most_restrictive_action": "Block",
+          "evidence_kind": "witness",
+          "witness": {
+            "user_group": "General",
+            "data_classification": "Restricted",
+            "content_type": "Attachment",
+            "channel": "Email",
+            "destination_trust": "Untrusted",
+            "device_trust": "Managed",
+            "file_type": "PDF",
+            "size_mb": 0
+          },
+          "explanation": "The same transfer is evaluated as Permit under first-match and Block under most-restrictive semantics."
+        }
+      ]
+    },
+    {
+      "variant": "exception_usb",
+      "mutations": [
+        "exception_usb"
+      ],
+      "counts": {
+        "action_conflict": 0,
+        "shadowing": 0,
+        "redundancy": 0,
+        "coverage_gap": 1,
+        "exception_leakage": 1,
+        "semantic_divergence": 0
+      },
+      "finding_count": 2,
+      "elapsed_ms": 142.677,
+      "findings": [
+        {
+          "id": "coverage_gap:REQ_USB_CONNECT",
+          "type": "coverage_gap",
+          "requirement": "REQ_USB_CONNECT",
+          "minimum_action": "Block",
+          "effective_action": "Permit",
+          "evidence_kind": "counterexample",
+          "witness": {
+            "user_group": "General",
+            "data_classification": "Internal",
+            "content_type": "DeviceConnect",
+            "channel": "USB",
+            "destination_trust": "Untrusted",
+            "device_trust": "Unmanaged",
+            "file_type": "PDF",
+            "size_mb": 0
+          },
+          "explanation": "REQ_USB_CONNECT requires at least Block, but the counterexample is evaluated as Permit."
+        },
+        {
+          "id": "exception_leakage:R_USB_CONNECT:0:REQ_USB_CONNECT",
+          "type": "exception_leakage",
+          "rule": "R_USB_CONNECT",
+          "exception_index": 0,
+          "requirement": "REQ_USB_CONNECT",
+          "minimum_action": "Block",
+          "effective_action": "Permit",
+          "evidence_kind": "counterexample",
+          "witness": {
+            "user_group": "General",
+            "data_classification": "Internal",
+            "content_type": "DeviceConnect",
+            "channel": "USB",
+            "destination_trust": "Untrusted",
+            "device_trust": "Unmanaged",
+            "file_type": "PDF",
+            "size_mb": 0
+          },
+          "explanation": "Exception 0 of R_USB_CONNECT admits a transfer in the scope of REQ_USB_CONNECT whose effective action is Permit, below the required Block (exception-linked requirement violation; removal of the exception is not shown to remove it)."
+        }
+      ]
+    },
+    {
+      "variant": "conflict_cloud",
+      "mutations": [
+        "conflict_cloud"
+      ],
+      "counts": {
+        "action_conflict": 1,
+        "shadowing": 0,
+        "redundancy": 0,
+        "coverage_gap": 1,
+        "exception_leakage": 0,
+        "semantic_divergence": 1
+      },
+      "finding_count": 3,
+      "elapsed_ms": 142.6271,
+      "findings": [
+        {
+          "id": "action_conflict:M_CLOUD_ZERO_SIZE_AUDIT:R_CLOUD_TRANSFER",
+          "type": "action_conflict",
+          "rules": [
+            "M_CLOUD_ZERO_SIZE_AUDIT",
+            "R_CLOUD_TRANSFER"
+          ],
+          "actions": [
+            "Audit",
+            "Block"
+          ],
+          "evidence_kind": "witness",
+          "witness": {
+            "user_group": "General",
+            "data_classification": "Confidential",
+            "content_type": "CloudService",
+            "channel": "CloudUpload",
+            "destination_trust": "Untrusted",
+            "device_trust": "Managed",
+            "file_type": "PDF",
+            "size_mb": 0
+          },
+          "explanation": "M_CLOUD_ZERO_SIZE_AUDIT and R_CLOUD_TRANSFER match the same transfer but prescribe Audit and Block."
+        },
+        {
+          "id": "coverage_gap:REQ_CLOUD_TRANSFER",
+          "type": "coverage_gap",
+          "requirement": "REQ_CLOUD_TRANSFER",
+          "minimum_action": "Block",
+          "effective_action": "Audit",
+          "evidence_kind": "counterexample",
+          "witness": {
+            "user_group": "General",
+            "data_classification": "Confidential",
+            "content_type": "CloudService",
+            "channel": "CloudUpload",
+            "destination_trust": "Untrusted",
+            "device_trust": "Managed",
+            "file_type": "PDF",
+            "size_mb": 0
+          },
+          "explanation": "REQ_CLOUD_TRANSFER requires at least Block, but the counterexample is evaluated as Audit."
+        },
+        {
+          "id": "semantic_divergence",
+          "type": "semantic_divergence",
+          "matched_rules": [
+            "R_CLOUD_TRANSFER",
+            "M_CLOUD_ZERO_SIZE_AUDIT"
+          ],
+          "first_match_action": "Audit",
+          "most_restrictive_action": "Block",
+          "evidence_kind": "witness",
+          "witness": {
+            "user_group": "General",
+            "data_classification": "Confidential",
+            "content_type": "CloudService",
+            "channel": "CloudUpload",
+            "destination_trust": "Untrusted",
+            "device_trust": "Managed",
+            "file_type": "PDF",
+            "size_mb": 0
+          },
+          "explanation": "The same transfer is evaluated as Audit under first-match and Block under most-restrictive semantics."
+        }
+      ]
+    },
+    {
+      "variant": "combined_faults",
+      "mutations": [
+        "shadow_email",
+        "exception_usb",
+        "conflict_cloud"
+      ],
+      "counts": {
+        "action_conflict": 2,
+        "shadowing": 1,
+        "redundancy": 1,
+        "coverage_gap": 3,
+        "exception_leakage": 1,
+        "semantic_divergence": 1
+      },
+      "finding_count": 9,
+      "elapsed_ms": 291.5832,
+      "findings": [
+        {
+          "id": "action_conflict:M_EMAIL_EARLY_PERMIT:R_EMAIL_EXTERNAL_ATTACHMENT",
+          "type": "action_conflict",
+          "rules": [
+            "M_EMAIL_EARLY_PERMIT",
+            "R_EMAIL_EXTERNAL_ATTACHMENT"
+          ],
+          "actions": [
+            "Permit",
+            "Block"
+          ],
+          "evidence_kind": "witness",
+          "witness": {
+            "user_group": "General",
+            "data_classification": "Restricted",
+            "content_type": "Attachment",
+            "channel": "Email",
+            "destination_trust": "Untrusted",
+            "device_trust": "Managed",
+            "file_type": "PDF",
+            "size_mb": 0
+          },
+          "explanation": "M_EMAIL_EARLY_PERMIT and R_EMAIL_EXTERNAL_ATTACHMENT match the same transfer but prescribe Permit and Block."
+        },
+        {
+          "id": "action_conflict:M_CLOUD_ZERO_SIZE_AUDIT:R_CLOUD_TRANSFER",
+          "type": "action_conflict",
+          "rules": [
+            "M_CLOUD_ZERO_SIZE_AUDIT",
+            "R_CLOUD_TRANSFER"
+          ],
+          "actions": [
+            "Audit",
+            "Block"
+          ],
+          "evidence_kind": "witness",
+          "witness": {
+            "user_group": "General",
+            "data_classification": "Confidential",
+            "content_type": "CloudService",
+            "channel": "CloudUpload",
+            "destination_trust": "Untrusted",
+            "device_trust": "Managed",
+            "file_type": "PDF",
+            "size_mb": 0
+          },
+          "explanation": "M_CLOUD_ZERO_SIZE_AUDIT and R_CLOUD_TRANSFER match the same transfer but prescribe Audit and Block."
+        },
+        {
+          "id": "shadowing:R_EMAIL_EXTERNAL_ATTACHMENT",
+          "type": "shadowing",
+          "rule": "R_EMAIL_EXTERNAL_ATTACHMENT",
+          "covering_rule_set": [
+            "M_EMAIL_EARLY_PERMIT"
+          ],
+          "representative_event_matching_rules": [
+            "M_EMAIL_EARLY_PERMIT"
+          ],
+          "evidence_kind": "representative_event",
+          "witness": {
+            "user_group": "General",
+            "data_classification": "Restricted",
+            "content_type": "Attachment",
+            "channel": "Email",
+            "destination_trust": "Untrusted",
+            "device_trust": "Managed",
+            "file_type": "PDF",
+            "size_mb": 0
+          },
+          "explanation": "R_EMAIL_EXTERNAL_ATTACHMENT is unreachable under first-match evaluation: every event it matches is also matched by at least one earlier rule in {M_EMAIL_EARLY_PERMIT} (UNSAT). The representative event is matched by M_EMAIL_EARLY_PERMIT."
+        },
+        {
+          "id": "redundancy:R_EMAIL_EXTERNAL_ATTACHMENT",
+          "type": "redundancy",
+          "rule": "R_EMAIL_EXTERNAL_ATTACHMENT",
+          "evidence_kind": "representative_event",
+          "witness": {
+            "user_group": "General",
+            "data_classification": "Restricted",
+            "content_type": "Attachment",
+            "channel": "Email",
+            "destination_trust": "Untrusted",
+            "device_trust": "Managed",
+            "file_type": "PDF",
+            "size_mb": 0
+          },
+          "explanation": "Removing R_EMAIL_EXTERNAL_ATTACHMENT does not change the policy decision for any valid transfer under first_match semantics."
+        },
+        {
+          "id": "coverage_gap:REQ_EMAIL_EXTERNAL_ATTACHMENT",
+          "type": "coverage_gap",
+          "requirement": "REQ_EMAIL_EXTERNAL_ATTACHMENT",
+          "minimum_action": "Block",
+          "effective_action": "Permit",
+          "evidence_kind": "counterexample",
+          "witness": {
+            "user_group": "General",
+            "data_classification": "Restricted",
+            "content_type": "Attachment",
+            "channel": "Email",
+            "destination_trust": "Untrusted",
+            "device_trust": "Managed",
+            "file_type": "PDF",
+            "size_mb": 0
+          },
+          "explanation": "REQ_EMAIL_EXTERNAL_ATTACHMENT requires at least Block, but the counterexample is evaluated as Permit."
+        },
+        {
+          "id": "coverage_gap:REQ_CLOUD_TRANSFER",
+          "type": "coverage_gap",
+          "requirement": "REQ_CLOUD_TRANSFER",
+          "minimum_action": "Block",
+          "effective_action": "Audit",
+          "evidence_kind": "counterexample",
+          "witness": {
+            "user_group": "General",
+            "data_classification": "Confidential",
+            "content_type": "CloudService",
+            "channel": "CloudUpload",
+            "destination_trust": "Untrusted",
+            "device_trust": "Managed",
+            "file_type": "PDF",
+            "size_mb": 0
+          },
+          "explanation": "REQ_CLOUD_TRANSFER requires at least Block, but the counterexample is evaluated as Audit."
+        },
+        {
+          "id": "coverage_gap:REQ_USB_CONNECT",
+          "type": "coverage_gap",
+          "requirement": "REQ_USB_CONNECT",
+          "minimum_action": "Block",
+          "effective_action": "Permit",
+          "evidence_kind": "counterexample",
+          "witness": {
+            "user_group": "General",
+            "data_classification": "Internal",
+            "content_type": "DeviceConnect",
+            "channel": "USB",
+            "destination_trust": "Untrusted",
+            "device_trust": "Unmanaged",
+            "file_type": "PDF",
+            "size_mb": 0
+          },
+          "explanation": "REQ_USB_CONNECT requires at least Block, but the counterexample is evaluated as Permit."
+        },
+        {
+          "id": "exception_leakage:R_USB_CONNECT:0:REQ_USB_CONNECT",
+          "type": "exception_leakage",
+          "rule": "R_USB_CONNECT",
+          "exception_index": 0,
+          "requirement": "REQ_USB_CONNECT",
+          "minimum_action": "Block",
+          "effective_action": "Permit",
+          "evidence_kind": "counterexample",
+          "witness": {
+            "user_group": "General",
+            "data_classification": "Internal",
+            "content_type": "DeviceConnect",
+            "channel": "USB",
+            "destination_trust": "Untrusted",
+            "device_trust": "Unmanaged",
+            "file_type": "PDF",
+            "size_mb": 0
+          },
+          "explanation": "Exception 0 of R_USB_CONNECT admits a transfer in the scope of REQ_USB_CONNECT whose effective action is Permit, below the required Block (exception-linked requirement violation; removal of the exception is not shown to remove it)."
+        },
+        {
+          "id": "semantic_divergence",
+          "type": "semantic_divergence",
+          "matched_rules": [
+            "R_CLOUD_TRANSFER",
+            "M_CLOUD_ZERO_SIZE_AUDIT"
+          ],
+          "first_match_action": "Audit",
+          "most_restrictive_action": "Block",
+          "evidence_kind": "witness",
+          "witness": {
+            "user_group": "Finance",
+            "data_classification": "Confidential",
+            "content_type": "CloudService",
+            "channel": "CloudUpload",
+            "destination_trust": "Untrusted",
+            "device_trust": "Managed",
+            "file_type": "PDF",
+            "size_mb": 0
+          },
+          "explanation": "The same transfer is evaluated as Audit under first-match and Block under most-restrictive semantics."
+        }
+      ]
+    }
+  ]
+}

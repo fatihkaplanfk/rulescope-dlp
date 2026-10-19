@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+# RuleScope-DLP
 
 RuleScope-DLP is a research prototype for explainable, solver-aided verification of multi-channel enterprise data loss prevention policies. It translates a vendor-neutral JSON policy into SMT constraints and returns concrete witness transfers for five anomaly classes:
 
@@ -39,6 +38,70 @@ node src/cli.js analyze examples/sample-policy.json --semantics most_restrictive
 ```
 
 The JSON schema is intentionally compact. A rule contains an identifier, priority, condition clause, optional exception clauses, and action. An omitted attribute or `"*"` is a wildcard. Scalar values, arrays, and inclusive numeric `size_mb` ranges are supported. Coverage and exception-leakage checks are evaluated against explicit `requirements`; the analyzer does not assume that every transfer must be blocked.
+
+## Formal semantics and what a result means
+
+**Notation.** D(e) is the valid event domain: each categorical attribute takes
+one value of its declared domain, and `size_mb` is an integer in
+`numeric_limits.size_mb`. C_i is rule i's condition clause and X_ik its k-th
+exception clause. A clause is a conjunction over attributes; an array means
+"any of these values"; `"*"` or an omitted attribute means "any value".
+
+**Rule matching.** The effective match of an enabled rule is
+`M_i(e) = C_i(e) ∧ ¬(X_i1(e) ∨ … ∨ X_in(e))`. A disabled rule never matches.
+An empty exception list leaves `M_i = C_i`. An empty exception object `{}` has no
+constraints, so it matches every event and the rule never matches.
+
+**Priority.** A missing priority defaults to the rule's position. An explicitly
+given priority must be an integer, or validation fails. Rules are ordered by
+ascending priority; ties are broken by rule id in ordinal (UTF-16 code-unit)
+order, shared by all components (`src/ordering.js`).
+
+**Decisions and severity.** Severity order:
+Permit < Audit < Warn < Encrypt < Quarantine < Block.
+- `first_match`: the action of the first matching rule.
+- `most_restrictive`: the strongest action among matching rules.
+- Under both semantics, `default_action` applies only when no rule matches.
+
+**Checks.** Every query includes D(e).
+
+| Check | Query | Finding when | Evidence |
+|---|---|---|---|
+| Action conflict | ∃e. M_i ∧ M_j, with different actions | SAT | witness |
+| Shadowing (first-match) | (1) ∃e. M_r ∧ ¬⋁_{p<r} M_p; (2) ∃e. M_r ∧ ⋁_{p<r} M_p | (1) UNSAT and (2) SAT | representative event |
+| Redundancy | (1) ∃e. M_r ∧ dec_P(e) ≠ dec_{P∖r}(e); (2) ∃e. M_r | (1) UNSAT and (2) SAT | representative event |
+| Coverage gap | ∃e. Q_j ∧ sev(dec_P(e)) < min_j | SAT | counterexample |
+| Exception-linked requirement violation | ∃e. C_r ∧ X_rk ∧ Q_j ∧ sev(dec_P(e)) < min_j | SAT | counterexample |
+| Semantic divergence | ∃e. dec^FM_P(e) ≠ dec^MR_P(e) | SAT | witness |
+
+How to read the checks:
+- **Shadowing and redundancy** are universal properties established by UNSAT. The
+  second query only confirms that the rule's match set is not empty. Its event is
+  an illustration (`evidence_kind: "representative_event"`), not a proof.
+  - For shadowing, `covering_rule_set` lists the earlier rules whose union is
+    proven to cover the rule; this set is not minimised.
+  - `representative_event_matching_rules` lists only the rules that match the
+    representative event.
+- **Rules with an empty match set** are not reported by any check.
+- **Coverage gap with an empty requirement scope.** UNSAT holds vacuously. This
+  does not mean that any protected event exists.
+- **Exception-linked violation** (finding type `exception_leakage`) reports an
+  event inside the exception region that violates a requirement. It does not
+  show that removing the exception would remove the violation:
+  - the rule's own action may already be below the minimum;
+  - under first-match, an earlier rule may decide the event.
+  Every such event also satisfies the coverage-gap query of the same requirement.
+- **Prefilter.** Before querying, pairs whose condition clauses cannot overlap are
+  skipped. This over-approximates overlap (exceptions are ignored), so it never
+  removes a rule that could match.
+
+**Completeness.** Each report counts SAT, UNSAT and UNKNOWN queries
+(`query_stats`). If any query is UNKNOWN, the report is marked
+`analysis_status: "incomplete"`, the inconclusive queries are listed with the
+solver's reason, and the CLI exits with code 3. An UNKNOWN result never counts
+as UNSAT or as "no finding". The absence of a finding establishes the property
+only for a complete analysis. Solver errors are not caught; they abort the
+analysis.
 
 ## Reproduce the experiment
 

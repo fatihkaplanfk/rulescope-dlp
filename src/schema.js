@@ -40,8 +40,13 @@ export function normalizePolicy(raw) {
       id: rule.id ?? `R${String(index + 1).padStart(4, "0")}`,
       description: rule.description ?? "",
       enabled: rule.enabled !== false,
-      priority: Number.isInteger(rule.priority) ? rule.priority : index + 1,
+      // A missing priority defaults to the rule's position. An explicitly given
+      // priority is kept as is and must be an integer (checked in validatePolicy).
+      priority: rule.priority === undefined ? index + 1 : rule.priority,
       conditions: rule.conditions ?? {},
+      // Each exception is a conjunctive clause; a rule is excluded when any
+      // exception matches. An empty exception object {} has no constraints and
+      // therefore matches every event, so the rule never matches.
       exceptions: Array.isArray(rule.exceptions)
         ? rule.exceptions
         : rule.exceptions
@@ -78,6 +83,7 @@ export function validatePolicy(policy) {
   for (const rule of policy.rules) {
     if (ids.has(rule.id)) errors.push(`Duplicate rule id: ${rule.id}`);
     ids.add(rule.id);
+    if (!Number.isInteger(rule.priority)) errors.push(`Priority of ${rule.id} must be an integer: ${rule.priority}`);
     if (!(rule.action in ACTION_SEVERITY)) errors.push(`Unknown action in ${rule.id}: ${rule.action}`);
     validateClause(rule.conditions, policy, `${rule.id}.conditions`, errors);
     rule.exceptions.forEach((clause, index) =>

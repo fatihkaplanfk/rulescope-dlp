@@ -1,0 +1,3804 @@
+[
+  {
+    "kind": "benchmark",
+    "label": "n50_seed1",
+    "rules": 50,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n50_seed2",
+    "rules": 50,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n50_seed3",
+    "rules": 50,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n50_seed4",
+    "rules": 50,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n50_seed5",
+    "rules": 50,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n50_seed6",
+    "rules": 50,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n50_seed7",
+    "rules": 50,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n50_seed8",
+    "rules": 50,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n50_seed9",
+    "rules": 50,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n50_seed10",
+    "rules": 50,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n100_seed1",
+    "rules": 100,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n100_seed2",
+    "rules": 100,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n100_seed3",
+    "rules": 100,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n100_seed4",
+    "rules": 100,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n100_seed5",
+    "rules": 100,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n100_seed6",
+    "rules": 100,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n100_seed7",
+    "rules": 100,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n100_seed8",
+    "rules": 100,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n100_seed9",
+    "rules": 100,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n100_seed10",
+    "rules": 100,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n250_seed1",
+    "rules": 250,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n250_seed2",
+    "rules": 250,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n250_seed3",
+    "rules": 250,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n250_seed4",
+    "rules": 250,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n250_seed5",
+    "rules": 250,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n250_seed6",
+    "rules": 250,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n250_seed7",
+    "rules": 250,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n250_seed8",
+    "rules": 250,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n250_seed9",
+    "rules": 250,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n250_seed10",
+    "rules": 250,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n500_seed1",
+    "rules": 500,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n500_seed2",
+    "rules": 500,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n500_seed3",
+    "rules": 500,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n500_seed4",
+    "rules": 500,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n500_seed5",
+    "rules": 500,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n500_seed6",
+    "rules": 500,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n500_seed7",
+    "rules": 500,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n500_seed8",
+    "rules": 500,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n500_seed9",
+    "rules": 500,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n500_seed10",
+    "rules": 500,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n1000_seed1",
+    "rules": 1000,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n1000_seed2",
+    "rules": 1000,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n1000_seed3",
+    "rules": 1000,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n1000_seed4",
+    "rules": 1000,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n1000_seed5",
+    "rules": 1000,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n1000_seed6",
+    "rules": 1000,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n1000_seed7",
+    "rules": 1000,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n1000_seed8",
+    "rules": 1000,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n1000_seed9",
+    "rules": 1000,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "benchmark",
+    "label": "n1000_seed10",
+    "rules": 1000,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 15,
+      "sat": 11,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "expected_ids": [
+      "action_conflict:CF1:CF2",
+      "coverage_gap:EX_REQ",
+      "coverage_gap:GAP_REQ",
+      "exception_leakage:EX1:0:EX_REQ",
+      "redundancy:SH1",
+      "redundancy:SH2",
+      "shadowing:SH2"
+    ],
+    "matches_expected": true
+  },
+  {
+    "kind": "spedia",
+    "label": "clean",
+    "rules": 4,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 4,
+      "sat": 0,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "coverage_gap": {
+          "sat": 0,
+          "unsat": 3,
+          "unknown": 0
+        },
+        "semantic_divergence": {
+          "sat": 0,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [],
+    "expected_ids": null,
+    "matches_expected": null
+  },
+  {
+    "kind": "spedia",
+    "label": "shadow_email",
+    "rules": 5,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 10,
+      "sat": 6,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 0,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 1,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "semantic_divergence": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:M_EMAIL_EARLY_PERMIT:R_EMAIL_EXTERNAL_ATTACHMENT",
+      "coverage_gap:REQ_EMAIL_EXTERNAL_ATTACHMENT",
+      "redundancy:R_EMAIL_EXTERNAL_ATTACHMENT",
+      "semantic_divergence",
+      "shadowing:R_EMAIL_EXTERNAL_ATTACHMENT"
+    ],
+    "expected_ids": null,
+    "matches_expected": null
+  },
+  {
+    "kind": "spedia",
+    "label": "exception_usb",
+    "rules": 4,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 8,
+      "sat": 3,
+      "unsat": 5,
+      "unknown": 0,
+      "by_check": {
+        "redundancy_difference": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 1,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "semantic_divergence": {
+          "sat": 0,
+          "unsat": 1,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "coverage_gap:REQ_USB_CONNECT",
+      "exception_leakage:R_USB_CONNECT:0:REQ_USB_CONNECT"
+    ],
+    "expected_ids": null,
+    "matches_expected": null
+  },
+  {
+    "kind": "spedia",
+    "label": "conflict_cloud",
+    "rules": 5,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 8,
+      "sat": 6,
+      "unsat": 2,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 1,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "semantic_divergence": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:M_CLOUD_ZERO_SIZE_AUDIT:R_CLOUD_TRANSFER",
+      "coverage_gap:REQ_CLOUD_TRANSFER",
+      "semantic_divergence"
+    ],
+    "expected_ids": null,
+    "matches_expected": null
+  },
+  {
+    "kind": "spedia",
+    "label": "combined_faults",
+    "rules": 6,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 18,
+      "sat": 14,
+      "unsat": 4,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 2,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "shadowing_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 4,
+          "unsat": 1,
+          "unknown": 0
+        },
+        "redundancy_representative": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 3,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 2,
+          "unknown": 0
+        },
+        "semantic_divergence": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:M_CLOUD_ZERO_SIZE_AUDIT:R_CLOUD_TRANSFER",
+      "action_conflict:M_EMAIL_EARLY_PERMIT:R_EMAIL_EXTERNAL_ATTACHMENT",
+      "coverage_gap:REQ_CLOUD_TRANSFER",
+      "coverage_gap:REQ_EMAIL_EXTERNAL_ATTACHMENT",
+      "coverage_gap:REQ_USB_CONNECT",
+      "exception_leakage:R_USB_CONNECT:0:REQ_USB_CONNECT",
+      "redundancy:R_EMAIL_EXTERNAL_ATTACHMENT",
+      "semantic_divergence",
+      "shadowing:R_EMAIL_EXTERNAL_ATTACHMENT"
+    ],
+    "expected_ids": null,
+    "matches_expected": null
+  },
+  {
+    "kind": "example",
+    "label": "sample-policy",
+    "rules": 3,
+    "equal_priority_groups": 0,
+    "analysis_status": "complete",
+    "query_stats": {
+      "total": 8,
+      "sat": 8,
+      "unsat": 0,
+      "unknown": 0,
+      "by_check": {
+        "action_conflict": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "shadowing_reachability": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "redundancy_difference": {
+          "sat": 3,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "coverage_gap": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "exception_leakage": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        },
+        "semantic_divergence": {
+          "sat": 1,
+          "unsat": 0,
+          "unknown": 0
+        }
+      }
+    },
+    "inconclusive_queries": [],
+    "finding_ids": [
+      "action_conflict:R01:R02",
+      "coverage_gap:REQ-USB-01",
+      "exception_leakage:R03:0:REQ-USB-01",
+      "semantic_divergence"
+    ],
+    "expected_ids": null,
+    "matches_expected": null
+  }
+]

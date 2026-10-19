@@ -1,3 +1,4 @@
+import { canonicalRuleIds, compareRules } from "./ordering.js";
 import { ACTION_SEVERITY } from "./schema.js";
 
 function resultName(result) {
@@ -5,8 +6,23 @@ function resultName(result) {
 }
 
 export class DlpAnalyzer {
-  constructor(Context, policy, contextName = `policylint_${Date.now()}`) {
+  // options (all optional; the defaults keep the original behaviour):
+  //   queryTimeoutMs     per-query solver timeout; a timed-out query returns
+  //                      UNKNOWN (reason "timeout") and is counted as such.
+  //   onProgress         callback receiving progress events (stage start/end
+  //                      and, between queries, at most every progressIntervalMs).
+  //                      No event can be emitted while a single solver query
+  //                      is running, so heartbeats are not guaranteed during
+  //                      a long query.
+  //   progressIntervalMs throttle for between-query progress events (5000).
+  constructor(Context, policy, contextName = `policylint_${Date.now()}`, options = {}) {
     this.policy = policy;
+    this.queryTimeoutMs = options.queryTimeoutMs ?? null;
+    this.onProgress = options.onProgress ?? null;
+    this.progressIntervalMs = options.progressIntervalMs ?? 5000;
+    this.stage = null;
+    this.analysisStartedAt = null;
+    this.lastProgressAt = 0;
     this.z = new Context(contextName);
     this.variables = {};
     this.indexes = {};
@@ -23,6 +39,10 @@ export class DlpAnalyzer {
     const [sizeMin, sizeMax] = policy.numeric_limits.size_mb;
     this.domainConstraints.push(this.variables.size_mb.ge(sizeMin), this.variables.size_mb.le(sizeMax));
     this.ruleFormulaCache = new Map();
+    // Solver factory; replaceable by a test double (see test/query-status.test.js).
+    // It receives the check name and subject of the query being built.
+    this.createSolver = (check, subject) => new this.z.Solver();
+    this.queryStats = emptyQueryStats();
   }
 
   bool(value) {
@@ -77,7 +97,7 @@ export class DlpAnalyzer {
   decisionExpression(rules = this.policy.rules, semantics = this.policy.semantics) {
     const active = rules
       .filter(rule => rule.enabled)
-      .sort((a, b) => a.priority - b.priority || a.id.localeCompare(b.id));
+      .sort(compareRules);
     const defaultDecision = this.z.Int.val(ACTION_SEVERITY[this.policy.default_action]);
 
     if (semantics === "first_match") {
@@ -106,11 +126,17 @@ export class DlpAnalyzer {
     return this.z.If(this.or(matchFormulas), strongestMatchingAction, defaultDecision);
   }
 
-  async solve(formulas) {
-    const solver = new this.z.Solver();
+  // Central query layer. Every SMT query goes through here so that SAT, UNSAT
+  // and UNKNOWN outcomes are counted. Solver errors are not caught: they
+  // propagate to the caller and abort the analysis.
+  async solve(formulas, check = "query", subject = null) {
+    const solver = this.createSolver(check, subject);
+    if (this.queryTimeoutMs !== null) solver.set("timeout", this.queryTimeoutMs);
     solver.add(...this.domainConstraints, ...formulas);
     const status = await solver.check();
     const name = resultName(status);
+    this.recordQuery(check, subject, name, solver);
+    this.emitProgress("query", false);
     if (name !== "sat") {
       solver.release();
       return { status: name, witness: null, model: null };
@@ -118,6 +144,43 @@ export class DlpAnalyzer {
     const model = solver.model();
     const witness = this.modelToWitness(model);
     return { status: name, witness, model, solver };
+  }
+
+  recordQuery(check, subject, status, solver) {
+    const stats = this.queryStats;
+    const bucket = (stats.by_check[check] ??= { sat: 0, unsat: 0, unknown: 0 });
+    stats.total += 1;
+    if (status === "sat" || status === "unsat") {
+      stats[status] += 1;
+      bucket[status] += 1;
+      return;
+    }
+    // Anything other than sat/unsat is inconclusive. It is never read as UNSAT
+    // and never as "checked, no finding".
+    stats.unknown += 1;
+    bucket.unknown += 1;
+    let reason = null;
+    try {
+      reason = typeof solver.reasonUnknown === "function" ? String(solver.reasonUnknown()) : null;
+    } catch {
+      reason = null;
+    }
+    stats.inconclusive.push({ check, subject, status, reason_unknown: reason });
+  }
+
+  emitProgress(event, force) {
+    if (!this.onProgress) return;
+    const now = Date.now();
+    if (!force && now - this.lastProgressAt < this.progressIntervalMs) return;
+    this.lastProgressAt = now;
+    const stats = this.queryStats;
+    this.onProgress({
+      event,
+      stage: this.stage,
+      elapsed_ms: this.analysisStartedAt === null ? null : Number(process.hrtime.bigint() - this.analysisStartedAt) / 1e6,
+      queries: { total: stats.total, sat: stats.sat, unsat: stats.unsat, unknown: stats.unknown },
+      by_check: structuredClone(stats.by_check)
+    });
   }
 
   modelToWitness(model) {
@@ -151,22 +214,53 @@ export class DlpAnalyzer {
       "semantic_divergence"
     ]);
     const findings = [];
+    this.queryStats = emptyQueryStats();
     const startedAt = process.hrtime.bigint();
+    this.analysisStartedAt = startedAt;
+    const checkElapsedMs = {};
+    const runCheck = async (name, enabled, check) => {
+      if (!enabled) return;
+      this.stage = name;
+      this.emitProgress("stage_start", true);
+      const checkStart = process.hrtime.bigint();
+      findings.push(...(await check()));
+      checkElapsedMs[name] = Number(process.hrtime.bigint() - checkStart) / 1e6;
+      this.emitProgress("stage_end", true);
+    };
 
-    if (types.has("action_conflict")) findings.push(...(await this.findActionConflicts()));
-    if (types.has("shadowing") && semantics === "first_match") findings.push(...(await this.findShadowing()));
-    if (types.has("redundancy")) findings.push(...(await this.findRedundancy(semantics)));
-    if (types.has("coverage_gap")) findings.push(...(await this.findCoverageGaps(semantics)));
-    if (types.has("exception_leakage")) findings.push(...(await this.findExceptionLeakage(semantics)));
-    if (types.has("semantic_divergence")) findings.push(...(await this.findSemanticDivergence()));
+    await runCheck("action_conflict", types.has("action_conflict"), () => this.findActionConflicts());
+    await runCheck("shadowing", types.has("shadowing") && semantics === "first_match", () => this.findShadowing());
+    await runCheck("redundancy", types.has("redundancy"), () => this.findRedundancy(semantics));
+    await runCheck("coverage_gap", types.has("coverage_gap"), () => this.findCoverageGaps(semantics));
+    await runCheck("exception_leakage", types.has("exception_leakage"), () => this.findExceptionLeakage(semantics));
+    await runCheck("semantic_divergence", types.has("semantic_divergence"), () => this.findSemanticDivergence());
+    this.stage = "done";
 
     const elapsedMs = Number(process.hrtime.bigint() - startedAt) / 1e6;
+    const stats = this.queryStats;
+    const complete = stats.unknown === 0;
     return {
       policy: this.policy.name,
       semantics,
+      // "complete" means every query returned SAT or UNSAT. Only then does the
+      // absence of a finding establish the corresponding property.
+      analysis_status: complete ? "complete" : "incomplete",
+      complete,
+      query_stats: {
+        total: stats.total,
+        sat: stats.sat,
+        unsat: stats.unsat,
+        unknown: stats.unknown,
+        by_check: stats.by_check
+      },
+      inconclusive_queries: stats.inconclusive,
       rule_count: this.policy.rules.length,
       requirement_count: this.policy.requirements.length,
       elapsed_ms: elapsedMs,
+      // Wall-clock time of each check inside analyze(); their sum is slightly
+      // below elapsed_ms (stage bookkeeping is excluded).
+      check_elapsed_ms: checkElapsedMs,
+      query_timeout_ms: this.queryTimeoutMs,
       finding_count: findings.length,
       counts: Object.fromEntries(
         [...types].map(type => [type, findings.filter(finding => finding.type === type).length])
@@ -183,15 +277,23 @@ export class DlpAnalyzer {
         const first = rules[left];
         const second = rules[right];
         if (first.action === second.action || !clausesMayOverlap(first.conditions, second.conditions, this.policy)) continue;
-        const solution = await this.solve([this.ruleFormula(first), this.ruleFormula(second)]);
+        const [leftRule, rightRule] = canonicalRuleIds(first.id, second.id)[0] === first.id
+          ? [first, second]
+          : [second, first];
+        const solution = await this.solve(
+          [this.ruleFormula(first), this.ruleFormula(second)],
+          "action_conflict",
+          `${leftRule.id}|${rightRule.id}`
+        );
         if (solution.status === "sat") {
           findings.push({
-            id: findingId("action_conflict", first.id, second.id),
+            id: findingId("action_conflict", leftRule.id, rightRule.id),
             type: "action_conflict",
-            rules: [first.id, second.id],
-            actions: [first.action, second.action],
+            rules: [leftRule.id, rightRule.id],
+            actions: [leftRule.action, rightRule.action],
+            evidence_kind: "witness",
             witness: solution.witness,
-            explanation: `${first.id} and ${second.id} match the same transfer but prescribe ${first.action} and ${second.action}.`
+            explanation: `${leftRule.id} and ${rightRule.id} match the same transfer but prescribe ${leftRule.action} and ${rightRule.action}.`
           });
         }
         this.closeSolution(solution);
@@ -204,7 +306,7 @@ export class DlpAnalyzer {
     const findings = [];
     const ordered = this.policy.rules
       .filter(rule => rule.enabled)
-      .sort((a, b) => a.priority - b.priority || a.id.localeCompare(b.id));
+      .sort(compareRules);
     for (let index = 1; index < ordered.length; index += 1) {
       const rule = ordered[index];
       const previous = ordered.slice(0, index).filter(candidate =>
@@ -214,21 +316,30 @@ export class DlpAnalyzer {
       const reachable = await this.solve([
         this.ruleFormula(rule),
         this.z.Not(this.or(previous.map(candidate => this.ruleFormula(candidate))))
-      ]);
+      ], "shadowing_reachability", rule.id);
       if (reachable.status === "unsat") {
+        // UNSAT alone would also hold for an empty match set; the second query
+        // confirms that the rule matches at least one valid event.
         const proof = await this.solve([
           this.ruleFormula(rule),
           this.or(previous.map(candidate => this.ruleFormula(candidate)))
-        ]);
+        ], "shadowing_representative", rule.id);
         if (proof.status === "sat") {
-          const blockers = this.matchingRuleIds(proof.model, previous);
+          const coveringSet = previous.map(candidate => candidate.id);
+          const representativeMatches = this.matchingRuleIds(proof.model, previous);
           findings.push({
             id: findingId("shadowing", rule.id),
             type: "shadowing",
             rule: rule.id,
-            shadowed_by: blockers,
+            // Established by the UNSAT query: the union of these earlier rules
+            // covers every event the rule can match. The set is not minimised.
+            covering_rule_set: coveringSet,
+            // Only the earlier rules that match the representative event. This
+            // list alone is not claimed to cover the rule's match set.
+            representative_event_matching_rules: representativeMatches,
+            evidence_kind: "representative_event",
             witness: proof.witness,
-            explanation: `${rule.id} is unreachable under first-match evaluation because earlier rule(s) ${blockers.join(", ")} cover every event it can match.`
+            explanation: `${rule.id} is unreachable under first-match evaluation: every event it matches is also matched by at least one earlier rule in {${coveringSet.join(", ")}} (UNSAT). The representative event is matched by ${representativeMatches.join(", ")}.`
           });
         }
         this.closeSolution(proof);
@@ -259,14 +370,16 @@ export class DlpAnalyzer {
       const reducedRules = overlapping;
       const full = this.decisionExpression(localRules, semantics);
       const reduced = this.decisionExpression(reducedRules, semantics);
-      const difference = await this.solve([this.ruleFormula(rule), full.neq(reduced)]);
+      const difference = await this.solve([this.ruleFormula(rule), full.neq(reduced)], "redundancy_difference", rule.id);
       if (difference.status === "unsat") {
-        const example = await this.solve([this.ruleFormula(rule)]);
+        // Excludes rules with an empty match set (UNSAT would hold vacuously).
+        const example = await this.solve([this.ruleFormula(rule)], "redundancy_representative", rule.id);
         if (example.status === "sat") {
           findings.push({
             id: findingId("redundancy", rule.id),
             type: "redundancy",
             rule: rule.id,
+            evidence_kind: "representative_event",
             witness: example.witness,
             explanation: `Removing ${rule.id} does not change the policy decision for any valid transfer under ${semantics} semantics.`
           });
@@ -286,10 +399,13 @@ export class DlpAnalyzer {
       );
       const decision = this.decisionExpression(relevantRules, semantics);
       const minimum = ACTION_SEVERITY[requirement.minimum_action];
+      // UNSAT means no valid event in the requirement scope falls below the
+      // minimum. For an empty scope this holds vacuously; it does not mean that
+      // any protected event exists.
       const solution = await this.solve([
         this.clauseFormula(requirement.conditions),
         decision.lt(minimum)
-      ]);
+      ], "coverage_gap", requirement.id);
       if (solution.status === "sat") {
         const actual = Number(solution.model.eval(decision, true).value());
         findings.push({
@@ -298,8 +414,9 @@ export class DlpAnalyzer {
           requirement: requirement.id,
           minimum_action: requirement.minimum_action,
           effective_action: actionFromSeverity(actual),
+          evidence_kind: "counterexample",
           witness: solution.witness,
-          explanation: `${requirement.id} requires at least ${requirement.minimum_action}, but the witness is evaluated as ${actionFromSeverity(actual)}.`
+          explanation: `${requirement.id} requires at least ${requirement.minimum_action}, but the counterexample is evaluated as ${actionFromSeverity(actual)}.`
         });
       }
       this.closeSolution(solution);
@@ -318,12 +435,16 @@ export class DlpAnalyzer {
           );
           const decision = this.decisionExpression(relevantRules, semantics);
           const minimum = ACTION_SEVERITY[requirement.minimum_action];
+          // Exception-linked requirement violation: an event inside the rule's
+          // conditions, the exception and the requirement scope whose effective
+          // decision is below the minimum. It does not establish that removing
+          // the exception would remove the violation (no counterfactual query).
           const solution = await this.solve([
             this.ruleBaseFormula(rule),
             this.clauseFormula(exception),
             this.clauseFormula(requirement.conditions),
             decision.lt(minimum)
-          ]);
+          ], "exception_leakage", `${rule.id}:${exceptionIndex}:${requirement.id}`);
           if (solution.status === "sat") {
             const actual = Number(solution.model.eval(decision, true).value());
             findings.push({
@@ -334,8 +455,9 @@ export class DlpAnalyzer {
               requirement: requirement.id,
               minimum_action: requirement.minimum_action,
               effective_action: actionFromSeverity(actual),
+              evidence_kind: "counterexample",
               witness: solution.witness,
-              explanation: `Exception ${exceptionIndex} in ${rule.id} admits a transfer protected by ${requirement.id}; its effective action falls to ${actionFromSeverity(actual)}.`
+              explanation: `Exception ${exceptionIndex} of ${rule.id} admits a transfer in the scope of ${requirement.id} whose effective action is ${actionFromSeverity(actual)}, below the required ${requirement.minimum_action} (exception-linked requirement violation; removal of the exception is not shown to remove it).`
             });
           }
           this.closeSolution(solution);
@@ -348,7 +470,7 @@ export class DlpAnalyzer {
   async findSemanticDivergence() {
     const first = this.decisionExpression(this.policy.rules, "first_match");
     const restrictive = this.decisionExpression(this.policy.rules, "most_restrictive");
-    const solution = await this.solve([first.neq(restrictive)]);
+    const solution = await this.solve([first.neq(restrictive)], "semantic_divergence", null);
     if (solution.status !== "sat") {
       this.closeSolution(solution);
       return [];
@@ -362,12 +484,17 @@ export class DlpAnalyzer {
       matched_rules: matching,
       first_match_action: actionFromSeverity(firstValue),
       most_restrictive_action: actionFromSeverity(restrictiveValue),
+      evidence_kind: "witness",
       witness: solution.witness,
       explanation: `The same transfer is evaluated as ${actionFromSeverity(firstValue)} under first-match and ${actionFromSeverity(restrictiveValue)} under most-restrictive semantics.`
     };
     this.closeSolution(solution);
     return [finding];
   }
+}
+
+function emptyQueryStats() {
+  return { total: 0, sat: 0, unsat: 0, unknown: 0, by_check: {}, inconclusive: [] };
 }
 
 export function findingId(type, ...parts) {
